@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Dogs — Tail End Sanctuary</title>
+  <meta name="description" content="Meet the senior dogs who call Tail End Sanctuary home. Every dog here has a story.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Tail End Sanctuary</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="dogs.html" class="active">Meet the Dogs</a></li>
+        <li><a href="involved.html">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="btn btn-nav">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Meet the Dogs</h1>
+        <p>Every dog here has a story. Here are a few of them.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="dogs-grid">
+
+          <article class="dog-card">
+            <div class="dog-card-image">
+              <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80" alt="Teddy, a senior dog with a grey muzzle" loading="lazy">
+            </div>
+            <div class="dog-card-body">
+              <h3>Teddy</h3>
+              <p class="dog-age">Approximately 10 years old</p>
+              <p>Found wandering the streets alone and in pain. Teddy now has a warm bed, medical care, and people who make sure he is never alone again.</p>
+            </div>
+          </article>
+
+          <article class="dog-card">
+            <div class="dog-card-image">
+              <img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc8f9b?w=600&q=80" alt="Luna, an older dog with kind eyes" loading="lazy">
+            </div>
+            <div class="dog-card-body">
+              <h3>Luna</h3>
+              <p class="dog-age">Approximately 12 years old</p>
+              <p>Luna was found sleeping under a market stall. She is partially blind but loves to lie in the sun and be petted by volunteers.</p>
+            </div>
+          </article>
+
+          <article class="dog-card">
+            <div class="dog-card-image">
+              <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w=600&q=80" alt="Canelo, a brown senior dog resting" loading="lazy">
+            </div>
+            <div class="dog-card-body">
+              <h3>Canelo</h3>
+              <p class="dog-age">Approximately 11 years old</p>
+              <p>Canelo lived on the same street corner for years. Now he has a soft bed and regular meals, and he greets every visitor with a slow, happy tail wag.</p>
+            </div>
+          </article>
+
+          <article class="dog-card">
+            <div class="dog-card-image">
+              <img src="https://images.unsplash.com/photo-1558929996-da64ba858215?w=600&q=80" alt="Paloma, a gentle white senior dog" loading="lazy">
+            </div>
+            <div class="dog-card-body">
+              <h3>Paloma</h3>
+              <p class="dog-age">Approximately 13 years old</p>
+              <p>The oldest dog at the sanctuary, Paloma moves slowly but always finds a sunny spot. She is calm, gentle, and deeply loved by everyone here.</p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="dogs-note">
+          <p>More dogs coming soon. Each dog's profile will be updated as new residents arrive at the sanctuary.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Tail End Sanctuary</a>
+          <p>A safe haven for senior stray dogs in Lake Chapala, Mexico. Because every dog deserves comfort and love at the end.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="dogs.html">Meet the Dogs</a></li>
+            <li><a href="involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="mailto:info@tailendsanctuary.org">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Tail End Sanctuary &middot; Lake Chapala, Mexico</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
