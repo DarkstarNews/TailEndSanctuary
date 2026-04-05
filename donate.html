@@ -76,6 +76,11 @@
       <div class="section-header">
         <h2>Choose Your Gift</h2>
       </div>
+      <div class="gift-toggle">
+        <button class="gift-toggle-btn active" onclick="document.querySelectorAll('.gift-toggle-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active')">♡ One-Time</button>
+        <button class="gift-toggle-btn" onclick="document.querySelectorAll('.gift-toggle-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active')">↻ Monthly</button>
+      </div>
+      <p style="text-align:center;color:var(--text-light);font-size:0.9rem;margin-bottom:24px">Sustained care. Lasting impact.</p>
       <div class="gift-grid">
         <a href="#donate-placeholder" class="gift-card">
           <span class="amount">$25</span>
