@@ -10,102 +10,160 @@
 </head>
 <body>
 
+  <!-- NAVIGATION -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="logo.png" alt="Tail End Sanctuary" class="nav-logo-img">
-        <div class="nav-logo-text">TAIL END SANCTUARY<small>Peace · Dignity · Love</small></div>
+        <img src="logo.png" alt="Tail End Sanctuary Logo" class="nav-logo-img">
+        <div class="nav-logo-text">
+          Tail End Sanctuary
+          <small>LOVE. COMFORT. DIGNITY.</small>
+        </div>
       </a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="dogs.html">Meet the Dogs</a></li>
         <li><a href="get-involved.html">Get Involved</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
-        <li><a href="donate.html" class="btn btn-donate">Donate</a></li>
+        <li><a href="donate.html" class="btn btn-donate">♥ Donate</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="page-hero">
+  <!-- HERO -->
+  <section class="hero-dark">
+    <img src="images/dogs/benito.png" alt="Senior dog" class="hero-bg">
+    <div class="hero-overlay"></div>
     <div class="container">
-      <h1>Get in Touch</h1>
-      <p>We'd love to hear from you.</p>
+      <div class="hero-content">
+        <h1>Get in Touch</h1>
+        <p style="font-size: 1.3rem; color: rgba(255,255,255,0.95); font-style: italic; margin-bottom: 16px;">We'd love to hear from you.</p>
+        <p style="font-size: 1.05rem; color: rgba(255,255,255,0.85);">Whether you have a question, want to support our work, or simply feel moved to reach out—we're here.</p>
+      </div>
     </div>
   </section>
 
+  <!-- CONTACT GRID -->
   <section class="section section-alt">
     <div class="container">
       <div class="contact-grid">
+        
+        <!-- FORM -->
         <div>
-          <h2 style="margin-bottom:24px">Send Us a Message</h2>
-          <form onsubmit="return false">
+          <h2 style="margin-bottom: 12px; font-size: 2rem; color: var(--sage-dark);">Send Us a Message</h2>
+          <p style="color: var(--text-light); margin-bottom: 32px;">Fill out the form below and we'll get back to you as soon as possible.</p>
+          
+          <form>
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Your name">
+              <input type="text" id="name" name="name" placeholder="Your name" required>
             </div>
+            
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" placeholder="you@example.com">
+              <input type="email" id="email" name="email" placeholder="Your email address" required>
             </div>
+            
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" placeholder="How can we help?"></textarea>
+              <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 16px; font-size: 1rem;">
+              🐾 SEND MESSAGE
+            </button>
           </form>
         </div>
+
+        <!-- CONTACT INFO -->
         <div class="contact-info">
           <h3>Other Ways to Reach Us</h3>
+          
           <div class="contact-info-item">
             <div class="icon">📧</div>
             <div>
-              <strong>Email</strong>
+              <h4>Email</h4>
               <p><a href="mailto:hello@tailendsanctuary.org">hello@tailendsanctuary.org</a></p>
             </div>
           </div>
+          
           <div class="contact-info-item">
             <div class="icon">📍</div>
             <div>
-              <strong>Location</strong>
+              <h4>Location</h4>
               <p>Lake Chapala Area, Mexico</p>
+              <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">(exact location shared for privacy)</p>
             </div>
           </div>
+          
           <div class="contact-info-item">
-            <div class="icon">🌐</div>
+            <div class="icon">♥</div>
             <div>
-              <strong>Follow Us</strong>
+              <h4>Follow Us</h4>
+              <p style="margin-bottom: 12px;">Stay connected and follow the dogs' journeys.</p>
               <div class="social-icons">
-                <a href="#" class="social-icon" title="Facebook">f</a>
-                <a href="#" class="social-icon" title="Instagram">📷</a>
-                <a href="#" class="social-icon" title="Twitter">𝕏</a>
+                <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                <a href="#" class="social-icon" aria-label="YouTube">▶</a>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   </section>
 
-  <section class="section section-cream">
+  <!-- A NOTE FROM OUR HEART -->
+  <section class="section section-sage">
     <div class="container">
-      <div class="heart-note">
-        <h2 style="margin-bottom:20px">A Note from Our Heart</h2>
-        <p>Thank you for caring about senior dogs. Whether you're reaching out to volunteer, ask a question, or simply learn more—your interest means the world to us and to the dogs we serve. Every connection we make brings us one step closer to ensuring no senior dog spends their final days alone.</p>
+      <div style="max-width: 900px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 48px 40px; border-radius: var(--radius); backdrop-filter: blur(10px);">
+        <div style="display: flex; align-items: flex-start; gap: 28px;">
+          <div style="flex-shrink: 0;">
+            <img src="images/dogs/ringo.jpeg" alt="Senior dog" style="width: 220px; height: 220px; border-radius: var(--radius); object-fit: cover; box-shadow: var(--shadow);">
+          </div>
+          <div>
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+              <span style="font-size: 2rem;">♡</span>
+              <h3 style="font-size: 1.8rem; color: white; margin: 0;">A Note from Our Heart</h3>
+              <span style="font-size: 2rem;">♡</span>
+            </div>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.95); margin-bottom: 16px;">We are not able to take in every dog in need, but we do our best to offer guidance when we can.</p>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.95); font-style: italic;">Thank you for your understanding and for caring about these animals.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- THANK YOU -->
+  <section class="section section-cream" style="padding: 60px 24px;">
+    <div class="container">
+      <div style="text-align: center; max-width: 740px; margin: 0 auto;">
+        <p style="font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 16px;">Thank you for being part of this journey. Your compassion makes all the difference.</p>
+        <div style="font-size: 2.5rem; margin-top: 20px;">♡</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <h4>Tail End Sanctuary</h4>
-        <p style="font-size:0.9rem;margin-bottom:12px">Giving senior dogs a peaceful, loving ending to their lives in the Lake Chapala area of Mexico.</p>
-        <p class="footer-tagline">Peace · Dignity · Love</p>
+        <div class="footer-logo">
+          <img src="logo.png" alt="Tail End Sanctuary">
+          <div class="footer-logo-text">
+            Tail End Sanctuary
+            <small>LOVE. COMFORT. DIGNITY.</small>
+          </div>
+        </div>
+        <p class="footer-tagline">Lake Chapala, Mexico</p>
       </div>
+      
       <div>
-        <h4>Pages</h4>
+        <h4>Explore</h4>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -113,16 +171,33 @@
           <li><a href="get-involved.html">Get Involved</a></li>
         </ul>
       </div>
+      
       <div>
-        <h4>Support</h4>
+        <h4>Get Involved</h4>
         <ul class="footer-links">
           <li><a href="donate.html">Donate</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="get-involved.html">Sponsor a Dog</a></li>
+          <li><a href="get-involved.html">Volunteer</a></li>
+          <li><a href="contact.html">Wish List</a></li>
         </ul>
       </div>
+      
+      <div>
+        <h4>Connect</h4>
+        <div class="footer-email">
+          📧 <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Facebook">f</a>
+          <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+          <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Stay connected and get updates on our dogs and their stories.</p>
+      </div>
     </div>
+    
     <div class="footer-bottom">
-      <p>&copy; 2025 Tail End Sanctuary. All rights reserved.</p>
+      <p>© 2024 Tail End Sanctuary. All rights reserved. • Registered Nonprofit</p>
     </div>
   </footer>
 

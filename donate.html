@@ -10,117 +10,225 @@
 </head>
 <body>
 
+  <!-- NAVIGATION -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="logo.png" alt="Tail End Sanctuary" class="nav-logo-img">
-        <div class="nav-logo-text">TAIL END SANCTUARY<small>Peace · Dignity · Love</small></div>
+        <img src="logo.png" alt="Tail End Sanctuary Logo" class="nav-logo-img">
+        <div class="nav-logo-text">
+          Tail End Sanctuary
+          <small>LOVE. COMFORT. DIGNITY.</small>
+        </div>
       </a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="dogs.html">Meet the Dogs</a></li>
         <li><a href="get-involved.html">Get Involved</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="btn btn-donate active">Donate</a></li>
+        <li><a href="donate.html" class="btn btn-donate active">♥ Donate</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="hero">
+  <!-- HERO -->
+  <section class="hero-dark">
+    <img src="images/dogs/valentino.jpeg" alt="Senior dog" class="hero-bg">
+    <div class="hero-overlay"></div>
     <div class="container">
-      <h1>Their Next Chapter Starts With You</h1>
-      <p>Your donation provides safety, comfort, and loving care for senior dogs who have nowhere else to go.</p>
-      <div class="btn-group" style="justify-content:center">
-        <a href="#donate-placeholder" class="btn btn-primary">Donate Now</a>
-        <a href="#donate-placeholder" class="btn btn-secondary">Make It a Monthly Gift</a>
+      <div class="hero-content">
+        <h1>Give Them a Peaceful Ending</h1>
+        <p style="font-size: 1.15rem; line-height: 1.7; color: rgba(255,255,255,0.95); max-width: 560px;">Your donation provides safety, comfort, and love for senior dogs who have nowhere else to go.</p>
       </div>
     </div>
   </section>
 
-  <!-- HOW YOUR GIFT HELPS -->
+  <!-- FOR DOGS LIKE TEDDY -->
   <section class="section section-alt">
     <div class="container">
-      <div class="section-header">
-        <h2>How Your Gift Helps</h2>
-      </div>
-      <div class="values-grid">
-        <div class="value-item">
-          <div class="icon">🍽️</div>
-          <h3>Food &amp; Nutrition</h3>
-          <p>Healthy meals tailored to each dog's needs.</p>
+      <div class="story-block">
+        <div class="story-image">
+          <img src="images/dogs/teddy.jpeg" alt="Teddy">
         </div>
-        <div class="value-item">
-          <div class="icon">🩺</div>
-          <h3>Medical Care</h3>
-          <p>Veterinary visits, medications, and pain management.</p>
-        </div>
-        <div class="value-item">
-          <div class="icon">🏡</div>
-          <h3>Safe Shelter</h3>
-          <p>A warm, secure environment where they can rest.</p>
-        </div>
-        <div class="value-item">
-          <div class="icon">💛</div>
-          <h3>Love &amp; Dignity</h3>
-          <p>Companionship, comfort, and a peaceful life.</p>
+        <div class="story-content">
+          <h2 style="color: var(--brown);">For Dogs Like Teddy</h2>
+          <p style="margin-bottom: 16px;">Teddy didn't need saving.<br><em style="font-size: 1.1rem; color: var(--sage-dark);">He needed comfort.</em></p>
+          <p>A warm bed. Gentle care.<br>Someone by his side.</p>
+          <p style="margin-top: 20px; margin-bottom: 20px;">That's what we give to every dog who comes to us.</p>
+          <p>Dogs who are old. Dogs who are tired.<br>Dogs who would otherwise be alone.</p>
+          <p style="margin-top: 20px; font-weight: 600; color: var(--sage-dark); font-size: 1.1rem;">Your donation makes that possible.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CHOOSE YOUR GIFT -->
-  <section class="section section-cream" id="donate-placeholder">
+  <!-- DONATION SELECTOR -->
+  <section class="section section-cream">
     <div class="container">
       <div class="section-header">
-        <h2>Choose Your Gift</h2>
+        <h2 style="margin-bottom: 12px;">♡ Make a Difference Today</h2>
+        <p>Your support brings comfort, care, and dignity to dogs in their final chapter.</p>
       </div>
-      <div class="gift-toggle">
-        <button class="gift-toggle-btn active" onclick="document.querySelectorAll('.gift-toggle-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active')">♡ One-Time</button>
-        <button class="gift-toggle-btn" onclick="document.querySelectorAll('.gift-toggle-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active')">↻ Monthly</button>
-      </div>
-      <p style="text-align:center;color:var(--text-light);font-size:0.9rem;margin-bottom:24px">Sustained care. Lasting impact.</p>
-      <div class="gift-grid">
-        <a href="#donate-placeholder" class="gift-card">
-          <span class="amount">$25</span>
-          <p>Feeds a dog for a week</p>
-        </a>
-        <a href="#donate-placeholder" class="gift-card">
-          <span class="amount">$50</span>
-          <p>Provides essential medical care</p>
-        </a>
-        <a href="#donate-placeholder" class="gift-card">
-          <span class="amount">$100</span>
-          <p>A month of comfort and shelter</p>
-        </a>
-        <a href="#donate-placeholder" class="gift-card">
-          <span class="amount">$250</span>
-          <p>Say yes to the next dog who needs us</p>
-        </a>
-        <a href="#donate-placeholder" class="gift-card">
-          <span class="amount">Other</span>
-          <p>Every amount makes a difference</p>
-        </a>
+
+      <div class="donate-selector">
+        <div class="gift-toggle">
+          <button class="gift-toggle-btn" onclick="selectType('onetime')">🐾 One-Time Donation</button>
+          <button class="gift-toggle-btn active" onclick="selectType('monthly')">📅 Monthly Donation <span style="background: var(--brown); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; margin-left: 6px;">RECOMMENDED</span></button>
+        </div>
+
+        <div class="amount-grid">
+          <div class="amount-card" onclick="selectAmount(10)">
+            <span class="amount">$10</span>
+            <p>A nourishing meal</p>
+          </div>
+          <div class="amount-card selected" onclick="selectAmount(25)">
+            <span class="amount">$25</span>
+            <p>Pain relief and medication</p>
+          </div>
+          <div class="amount-card" onclick="selectAmount(50)">
+            <span class="amount">$50</span>
+            <p>A week of care and comfort</p>
+          </div>
+          <div class="amount-card" onclick="selectAmount(100)">
+            <span class="amount">$100</span>
+            <p>Sponsor a dog's final days</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 16px; margin-bottom: 28px;">
+          <p style="font-size: 0.95rem; color: var(--text-light);">$ <input type="number" placeholder="Other" style="border: none; border-bottom: 2px solid var(--sage); width: 80px; padding: 6px; font-size: 1.1rem; text-align: center; background: transparent;"> Custom amount</p>
+        </div>
+
+        <a href="#" class="btn btn-donate" style="width: 100%; justify-content: center; padding: 18px; font-size: 1.05rem;">♥ DONATE NOW →</a>
+
+        <p style="text-align: center; font-size: 0.85rem; color: var(--text-light); margin-top: 20px;">🔒 Secure donation. Every contribution goes directly to the dogs' care.</p>
       </div>
     </div>
   </section>
 
-  <section class="banner banner-sage">
-    <h2>You're Part of Their Story</h2>
-    <p>Because of you, a dog can rest. Be safe. Be loved.</p>
-    <a href="#donate-placeholder" class="btn btn-primary">Donate Now</a>
+  <!-- WHAT YOUR DONATION DOES -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="info-cards" style="grid-template-columns: 1fr 1fr;">
+        
+        <div class="info-card">
+          <h3>What Your Donation Does</h3>
+          <p style="font-size: 1.05rem; margin-bottom: 24px; color: var(--sage-dark); font-style: italic;">Because of you:</p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; font-size: 1rem;">
+              <span style="color: var(--brown); font-size: 1.5rem;">🛏️</span>
+              <span>A dog who once slept on the street now rests in a warm bed.</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; font-size: 1rem;">
+              <span style="color: var(--brown); font-size: 1.5rem;">❤️</span>
+              <span>A body in pain receives relief and gentle care.</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; font-size: 1rem;">
+              <span style="color: var(--brown); font-size: 1.5rem;">👁️</span>
+              <span>A life that was invisible is finally seen.</span>
+            </li>
+          </ul>
+          <div style="margin-top: 32px; padding: 24px; background: var(--cream); border-radius: 8px; text-align: center;">
+            <p style="font-size: 1rem; margin-bottom: 12px; color: var(--text);">💝 Every donation helps a dog feel safe.</p>
+            <p style="font-size: 1rem; margin-bottom: 12px; color: var(--text);">📅 Monthly support ensures ongoing care.</p>
+            <p style="font-size: 1rem; color: var(--text);">💚 Together, we can say yes to the next dog in need.</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Where Your Donation Goes</h3>
+          <p style="font-size: 1.05rem; margin-bottom: 24px; color: var(--sage-dark);">100% of your donation goes directly to the care of our dogs.</p>
+          <p style="font-size: 0.98rem; margin-bottom: 20px; color: var(--text-light); font-weight: 600;">Your support provides:</p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+              <span style="color: var(--sage); font-size: 1.2rem;">🍖</span>
+              <span>Food and daily nourishment</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+              <span style="color: var(--sage); font-size: 1.2rem;">🏥</span>
+              <span>Medical care and pain management</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+              <span style="color: var(--sage); font-size: 1.2rem;">🏠</span>
+              <span>Safe shelter and soft bedding</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+              <span style="color: var(--sage); font-size: 1.2rem;">🤲</span>
+              <span>End-of-life comfort and companionship</span>
+            </li>
+          </ul>
+          <div style="margin-top: 32px; padding: 24px; background: var(--cream); border-radius: 8px;">
+            <p style="font-size: 0.95rem; color: var(--text); line-height: 1.7;">We are a small, dedicated team in the Lake Chapala area, committed to giving senior stray dogs dignity at the end of their lives.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
+  <!-- YOU'RE PART OF THIS -->
+  <section class="banner banner-sage">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div style="display: flex; align-items: center; gap: 16px; justify-content: center; margin-bottom: 24px;">
+          <span style="font-size: 3rem;">♥</span>
+          <h2 style="margin: 0;">You're Part of This</h2>
+        </div>
+        <p style="font-size: 1.1rem; margin-bottom: 12px;">A growing community of compassionate supporters is helping us give senior dogs the peaceful endings they deserve.</p>
+        <p style="font-size: 1.15rem; font-style: italic; margin-bottom: 32px;">Every act of kindness matters.<br>Every donation changes a life.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER WAYS TO HELP -->
+  <section class="section section-cream" style="padding: 60px 24px;">
+    <div class="container">
+      <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 40px; color: var(--sage-dark);">Other Ways to Help</h3>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 900px; margin: 0 auto; text-align: center;">
+        <div>
+          <div style="font-size: 2.5rem; margin-bottom: 12px;">❤️</div>
+          <h4 style="margin-bottom: 8px; font-size: 1.2rem; color: var(--brown);">Become a monthly supporter</h4>
+        </div>
+        <div>
+          <div style="font-size: 2.5rem; margin-bottom: 12px;">📧</div>
+          <h4 style="margin-bottom: 8px; font-size: 1.2rem; color: var(--brown);">Contact us for direct giving options</h4>
+        </div>
+        <div>
+          <div style="font-size: 2.5rem; margin-bottom: 12px;">💬</div>
+          <h4 style="margin-bottom: 8px; font-size: 1.2rem; color: var(--brown);">Follow our journey and share our stories</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL MESSAGE -->
+  <section class="section section-alt" style="padding: 60px 24px;">
+    <div class="container">
+      <div style="max-width: 840px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; color: var(--sage-dark);">They Don't Need Years</h2>
+        <p style="font-size: 1.3rem; font-style: italic; color: var(--text); line-height: 1.7; margin-bottom: 32px;"><em>They just need kindness at the end.</em></p>
+        <a href="#" class="btn btn-donate" style="padding: 18px 42px; font-size: 1.05rem;">♥ DONATE NOW →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <h4>Tail End Sanctuary</h4>
-        <p style="font-size:0.9rem;margin-bottom:12px">Giving senior dogs a peaceful, loving ending to their lives in the Lake Chapala area of Mexico.</p>
-        <p class="footer-tagline">Peace · Dignity · Love</p>
+        <div class="footer-logo">
+          <img src="logo.png" alt="Tail End Sanctuary">
+          <div class="footer-logo-text">
+            Tail End Sanctuary
+            <small>LOVE. COMFORT. DIGNITY.</small>
+          </div>
+        </div>
+        <p class="footer-tagline">Lake Chapala, Mexico</p>
       </div>
+      
       <div>
-        <h4>Pages</h4>
+        <h4>Explore</h4>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -128,18 +236,47 @@
           <li><a href="get-involved.html">Get Involved</a></li>
         </ul>
       </div>
+      
       <div>
-        <h4>Support</h4>
+        <h4>Get Involved</h4>
         <ul class="footer-links">
           <li><a href="donate.html">Donate</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="get-involved.html">Sponsor a Dog</a></li>
+          <li><a href="get-involved.html">Volunteer</a></li>
+          <li><a href="contact.html">Wish List</a></li>
         </ul>
       </div>
+      
+      <div>
+        <h4>Connect</h4>
+        <div class="footer-email">
+          📧 <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Facebook">f</a>
+          <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+          <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Stay connected and get updates on our dogs and their stories.</p>
+      </div>
     </div>
+    
     <div class="footer-bottom">
-      <p>&copy; 2025 Tail End Sanctuary. All rights reserved.</p>
+      <p>© 2024 Tail End Sanctuary. All rights reserved. • Registered Nonprofit</p>
     </div>
   </footer>
+
+  <script>
+    function selectType(type) {
+      document.querySelectorAll('.gift-toggle-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+    
+    function selectAmount(amount) {
+      document.querySelectorAll('.amount-card').forEach(card => card.classList.remove('selected'));
+      event.target.closest('.amount-card').classList.add('selected');
+    }
+  </script>
 
 </body>
 </html>

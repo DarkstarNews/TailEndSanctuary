@@ -10,90 +10,148 @@
 </head>
 <body>
 
+  <!-- NAVIGATION -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="logo.png" alt="Tail End Sanctuary" class="nav-logo-img">
-        <div class="nav-logo-text">TAIL END SANCTUARY<small>Peace · Dignity · Love</small></div>
+        <img src="logo.png" alt="Tail End Sanctuary Logo" class="nav-logo-img">
+        <div class="nav-logo-text">
+          Tail End Sanctuary
+          <small>LOVE. COMFORT. DIGNITY.</small>
+        </div>
       </a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="dogs.html">Meet the Dogs</a></li>
         <li><a href="get-involved.html" class="active">Get Involved</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="btn btn-donate">Donate</a></li>
+        <li><a href="donate.html" class="btn btn-donate">♥ Donate</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="page-hero">
+  <!-- HERO -->
+  <section class="hero-dark">
+    <img src="images/dogs/ringo.jpeg" alt="Volunteer with senior dog" class="hero-bg">
+    <div class="hero-overlay"></div>
     <div class="container">
-      <h1>Get Involved</h1>
-      <p>Be part of their story.</p>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <p>There are many ways to help give senior dogs the comfort and dignity they deserve.</p>
-        <p style="margin-top:12px;font-size:0.95rem">Not everyone helps in the same way. Some give. Some stay connected. Some share the story. Every act of kindness helps ensure a dog is not alone at the end of their life.</p>
-      </div>
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-image" style="background:var(--sage-light)">💝</div>
-          <div class="card-body">
-            <h3>Donate</h3>
-            <p>A one-time or recurring gift goes directly to the care, feeding, and medical needs of our senior dogs.</p>
-            <a href="donate.html" class="btn btn-primary" style="width:100%">Donate Now</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image" style="background:#C9D4BC">🔄</div>
-          <div class="card-body">
-            <h3>Give Monthly</h3>
-            <p>Sustained, reliable support means we can plan ahead and say yes to the next dog who needs us.</p>
-            <a href="donate.html" class="btn btn-secondary" style="width:100%">Become a Monthly Giver</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image" style="background:#D4CFC5">📬</div>
-          <div class="card-body">
-            <h3>Follow Their Journey</h3>
-            <p>Stay connected through our email updates and social media. Share their stories and help spread the word.</p>
-            <a href="contact.html" class="btn btn-secondary" style="width:100%">Stay Connected</a>
-          </div>
-        </div>
+      <div class="hero-content">
+        <h1>Get Involved</h1>
+        <p style="font-size: 1.3rem; color: rgba(255,255,255,0.9);">Be part of their story.</p>
+        <p style="font-size: 1.05rem; color: rgba(255,255,255,0.85); margin-top: 12px;">There are many ways to help give senior dogs the comfort and dignity they deserve.</p>
       </div>
     </div>
   </section>
 
+  <!-- INTRO -->
+  <section class="section section-alt" style="padding: 60px 24px;">
+    <div class="container">
+      <div style="text-align: center; max-width: 840px; margin: 0 auto;">
+        <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 16px;">Not everyone helps in the same way.</p>
+        <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 20px; font-style: italic; color: var(--sage-dark);">Some give. Some stay connected. Some share the story.</h2>
+        <p style="font-size: 1.05rem; color: var(--text-light);">Every act of kindness helps ensure a dog is not alone at the end of their life.</p>
+        <div style="text-align: center; margin-top: 24px; font-size: 2.5rem;">♡</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTION CARDS -->
   <section class="section section-cream">
     <div class="container">
-      <div style="max-width:640px;margin:0 auto;text-align:center">
-        <h2 style="margin-bottom:16px">Every Act of Kindness Matters</h2>
-        <p style="color:var(--text-light);font-size:1.05rem">Whether you give once, give monthly, or simply share a dog's story with someone who needs to hear it—you are making a difference. You are telling a senior dog: you are not forgotten.</p>
+      <div class="action-cards">
+        
+        <!-- Donate -->
+        <div class="action-card">
+          <div class="icon">♥</div>
+          <h3>Donate</h3>
+          <p>Your donation provides food, medical care, and a peaceful place to rest.</p>
+          <a href="donate.html" class="btn btn-donate">DONATE NOW →</a>
+        </div>
+
+        <!-- Give Monthly -->
+        <div class="action-card">
+          <div class="icon" style="background: var(--brown);">📅</div>
+          <h3>Give Monthly</h3>
+          <p>Monthly support allows us to plan ahead and say yes to the next dog in need.</p>
+          <a href="donate.html" class="btn btn-primary">BECOME A MONTHLY DONOR →</a>
+        </div>
+
+        <!-- Follow Their Journey -->
+        <div class="action-card">
+          <div class="icon">📧</div>
+          <h3>Follow Their Journey</h3>
+          <p>Stay connected and see the difference your support makes. Follow along as we care for the dogs and share their stories.</p>
+          <div style="margin-top: 20px;">
+            <div class="social-icons" style="justify-content: center; margin-bottom: 16px;">
+              <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+              <a href="#" class="social-icon" aria-label="Facebook">f</a>
+            </div>
+            <a href="contact.html" class="btn btn-secondary">📧 JOIN OUR EMAIL LIST →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section class="banner banner-sage">
-    <h2>However You Choose to Help</h2>
-    <p>You are part of giving these dogs the dignity they deserve.</p>
-    <a href="donate.html" class="btn btn-primary">Support Tail End Sanctuary</a>
+  <!-- EVERY ACT MATTERS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div style="max-width: 1000px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 48px;">Every Act of Kindness Matters</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; margin-bottom: 48px;">
+          <div>
+            <div style="font-size: 3.5rem; margin-bottom: 16px;">♥</div>
+            <p style="font-size: 1.05rem; color: var(--text);">A shared post.</p>
+          </div>
+          <div>
+            <div style="font-size: 3.5rem; margin-bottom: 16px;">🐾</div>
+            <p style="font-size: 1.05rem; color: var(--text);">A small monthly gift.</p>
+          </div>
+          <div>
+            <div style="font-size: 3.5rem; margin-bottom: 16px;">✋</div>
+            <p style="font-size: 1.05rem; color: var(--text);">A single donation.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--cream); padding: 48px 40px; border-radius: var(--radius); text-align: center;">
+          <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text); margin-bottom: 16px;">It all adds up to something meaningful.</p>
+          <p style="font-size: 1.3rem; font-weight: 600; color: var(--sage-dark); margin-bottom: 10px;">Because of you, a dog can rest.</p>
+          <p style="font-size: 1.3rem; font-weight: 600; color: var(--sage-dark);">Because of you, a dog is not alone.</p>
+          <div style="text-align: center; margin-top: 24px; font-size: 2.5rem;">♡</div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- BOTTOM CTA -->
+  <section class="banner banner-sage">
+    <div class="container">
+      <h2>However You Choose to Help</h2>
+      <p>You are part of giving these dogs the dignity they deserve.</p>
+      <a href="donate.html" class="btn btn-donate" style="padding: 18px 42px; font-size: 1.05rem;">♥ DONATE NOW →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <h4>Tail End Sanctuary</h4>
-        <p style="font-size:0.9rem;margin-bottom:12px">Giving senior dogs a peaceful, loving ending to their lives in the Lake Chapala area of Mexico.</p>
-        <p class="footer-tagline">Peace · Dignity · Love</p>
+        <div class="footer-logo">
+          <img src="logo.png" alt="Tail End Sanctuary">
+          <div class="footer-logo-text">
+            Tail End Sanctuary
+            <small>LOVE. COMFORT. DIGNITY.</small>
+          </div>
+        </div>
+        <p class="footer-tagline">Lake Chapala, Mexico</p>
       </div>
+      
       <div>
-        <h4>Pages</h4>
+        <h4>Explore</h4>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -101,16 +159,33 @@
           <li><a href="get-involved.html">Get Involved</a></li>
         </ul>
       </div>
+      
       <div>
-        <h4>Support</h4>
+        <h4>Get Involved</h4>
         <ul class="footer-links">
           <li><a href="donate.html">Donate</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="get-involved.html">Sponsor a Dog</a></li>
+          <li><a href="get-involved.html">Volunteer</a></li>
+          <li><a href="contact.html">Wish List</a></li>
         </ul>
       </div>
+      
+      <div>
+        <h4>Connect</h4>
+        <div class="footer-email">
+          📧 <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Facebook">f</a>
+          <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+          <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Stay connected and get updates on our dogs and their stories.</p>
+      </div>
     </div>
+    
     <div class="footer-bottom">
-      <p>&copy; 2025 Tail End Sanctuary. All rights reserved.</p>
+      <p>© 2024 Tail End Sanctuary. All rights reserved. • Registered Nonprofit</p>
     </div>
   </footer>
 

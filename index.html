@@ -3,94 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tail End Sanctuary — Peace · Dignity · Love</title>
+  <title>Tail End Sanctuary — Where Every Dog's Final Chapter is Filled with Love</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- NAVIGATION -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="logo.png" alt="Tail End Sanctuary" class="nav-logo-img">
-        <div class="nav-logo-text">TAIL END SANCTUARY<small>Peace · Dignity · Love</small></div>
+        <img src="logo.png" alt="Tail End Sanctuary Logo" class="nav-logo-img">
+        <div class="nav-logo-text">
+          Tail End Sanctuary
+          <small>LOVE. COMFORT. DIGNITY.</small>
+        </div>
       </a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="dogs.html">Meet the Dogs</a></li>
         <li><a href="get-involved.html">Get Involved</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="btn btn-donate">Donate</a></li>
+        <li><a href="donate.html" class="btn btn-donate">♥ Donate</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero-image">
+    <img src="images/dogs/teddy.jpeg" alt="Senior dog at Tail End Sanctuary" class="hero-bg">
+    <div class="hero-overlay"></div>
     <div class="container">
-      <h1>Where every dog's final chapter is filled with love</h1>
-      <p>We rescue stray senior dogs and give them safety, care, and dignity for the rest of their lives.</p>
-      <div class="btn-group" style="justify-content:center">
-        <a href="donate.html" class="btn btn-primary">Give Them a Peaceful Ending</a>
-        <a href="dogs.html" class="btn btn-secondary">Meet the Dogs</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- VALUES -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="values-grid">
-        <div class="value-item">
-          <div class="icon">🛡️</div>
-          <h3>Safety</h3>
-          <p>A secure place where they are protected and cared for.</p>
-        </div>
-        <div class="value-item">
-          <div class="icon">🛏️</div>
-          <h3>Comfort</h3>
-          <p>Warm beds, gentle care, and a calm environment.</p>
-        </div>
-        <div class="value-item">
-          <div class="icon">💛</div>
-          <h3>Compassion</h3>
-          <p>Every dog is seen, known, and treated with kindness.</p>
-        </div>
-        <div class="value-item">
-          <div class="icon">✨</div>
-          <h3>Dignity</h3>
-          <p>Respected and loved through every stage of their life.</p>
+      <div class="hero-content">
+        <h1>Where every dog's final chapter is filled with love</h1>
+        <p>We rescue senior dogs and give them safety, care, and dignity for the rest of their lives.</p>
+        <div class="btn-group">
+          <a href="donate.html" class="btn btn-donate">Give Them a Peaceful Ending</a>
+          <a href="dogs.html" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.8); color: white;">Meet the Dogs</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BENITO -->
-  <section class="section section-cream">
-    <div class="container">
-      <div class="story-block">
-        <div class="story-image benito"><img src="images/dogs/benito.png" alt="Benito" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
-        <div class="story-content">
-          <h2>Meet Benito</h2>
-          <p>Benito is a cherished member of the Tail End Sanctuary family. Like every dog here, he is safe, cared for, and deeply loved.</p>
-          <a href="dogs.html" class="btn btn-secondary">Meet All the Dogs</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TEDDY STORY -->
+  <!-- MEET TEDDY -->
   <section class="section section-alt">
     <div class="container">
       <div class="story-block">
-        <div class="story-image teddy"><img src="images/dogs/teddy.jpeg" alt="Teddy" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div>
+        <div class="story-image">
+          <img src="images/dogs/teddy.jpeg" alt="Teddy">
+        </div>
         <div class="story-content">
           <h2>Meet Teddy</h2>
-          <p>Teddy was found wandering the streets at 10 years old—tired, alone, and in pain. He has cancer. But today, Teddy is safe. He has a warm bed, gentle medical care, and people who sit with him, comfort him, and make sure he is never alone again.</p>
+          <p>Teddy was found wandering the streets at 10 years old—tired, alone, and in pain.</p>
+          <p><strong>He has cancer.</strong></p>
+          <p>But today, Teddy is safe. He has a warm bed, gentle medical care, and people who sit with him, comfort him, and make sure he is never alone again.</p>
           <p>At Tail End Sanctuary, dogs like Teddy are not defined by how they suffered—but by how they are loved in the time they have left.</p>
           <a href="donate.html" class="btn btn-primary">Help Dogs Like Teddy</a>
         </div>
@@ -98,23 +67,43 @@
     </div>
   </section>
 
-  <!-- MISSION -->
+  <!-- MISSION STATEMENT -->
   <section class="section section-cream">
     <div class="container">
-      <div style="max-width:720px;margin:0 auto;text-align:center">
-        <h2 style="margin-bottom:20px">Every Dog Deserves Dignity</h2>
-        <p style="color:var(--text-light);font-size:1.05rem">At Tail End Sanctuary, we provide lifelong care for senior stray dogs who have nowhere else to go. We believe every dog deserves safety, comfort, and love—especially at the end.</p>
+      <div class="section-centered">
+        <h2 style="margin-bottom: 24px;">At Tail End Sanctuary, we <em>provide lifelong care</em> for senior stray dogs who have nowhere else to go.</h2>
+        <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 48px;">We believe every dog deserves</p>
+        
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="icon">🤲</div>
+            <h3>Safety</h3>
+          </div>
+          <div class="value-item">
+            <div class="icon">🤝</div>
+            <h3>Comfort</h3>
+          </div>
+          <div class="value-item">
+            <div class="icon">❤️</div>
+            <h3>Compassion</h3>
+          </div>
+          <div class="value-item">
+            <div class="icon">❤️</div>
+            <h3>Dignity</h3>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- BOTTOM CTA -->
+  <!-- CTA BANNER -->
   <section class="banner banner-sage">
-    <h2>You can give a dog a peaceful final chapter.</h2>
-    <p>Your support means a senior dog will never spend another night alone, afraid, or in pain.</p>
-    <div class="btn-group" style="justify-content:center">
-      <a href="donate.html" class="btn btn-primary">Donate</a>
-      <a href="dogs.html" class="btn btn-secondary" style="border-color:rgba(255,255,255,0.5);color:#fff">Meet the Dogs</a>
+    <div class="container">
+      <h2>You can give a dog a peaceful final chapter.</h2>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="donate.html" class="btn btn-donate">Donate</a>
+        <a href="dogs.html" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.6); color: white;">Meet the Dogs</a>
+      </div>
     </div>
   </section>
 
@@ -122,12 +111,18 @@
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <h4>Tail End Sanctuary</h4>
-        <p style="font-size:0.9rem;margin-bottom:12px">Giving senior dogs a peaceful, loving ending to their lives in the Lake Chapala area of Mexico.</p>
-        <p class="footer-tagline">Peace · Dignity · Love</p>
+        <div class="footer-logo">
+          <img src="logo.png" alt="Tail End Sanctuary">
+          <div class="footer-logo-text">
+            Tail End Sanctuary
+            <small>LOVE. COMFORT. DIGNITY.</small>
+          </div>
+        </div>
+        <p class="footer-tagline">Lake Chapala, Mexico</p>
       </div>
+      
       <div>
-        <h4>Pages</h4>
+        <h4>Explore</h4>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -135,16 +130,33 @@
           <li><a href="get-involved.html">Get Involved</a></li>
         </ul>
       </div>
+      
       <div>
-        <h4>Support</h4>
+        <h4>Get Involved</h4>
         <ul class="footer-links">
           <li><a href="donate.html">Donate</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="get-involved.html">Sponsor a Dog</a></li>
+          <li><a href="get-involved.html">Volunteer</a></li>
+          <li><a href="contact.html">Wish List</a></li>
         </ul>
       </div>
+      
+      <div>
+        <h4>Connect</h4>
+        <div class="footer-email">
+          📧 <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Facebook">f</a>
+          <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+          <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Stay connected and get updates on our dogs and their stories.</p>
+      </div>
     </div>
+    
     <div class="footer-bottom">
-      <p>&copy; 2025 Tail End Sanctuary. All rights reserved.</p>
+      <p>© 2024 Tail End Sanctuary. All rights reserved. • Registered Nonprofit</p>
     </div>
   </footer>
 

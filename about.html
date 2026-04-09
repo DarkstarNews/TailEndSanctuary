@@ -7,290 +7,96 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* About Us specific styles */
-    .about-hero {
-      position: relative;
-      height: 300px;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('images/dogs/benito.png');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-    }
-    .about-hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      font-weight: 400;
-      font-style: italic;
-      margin: 0;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-    .about-hero small {
-      display: block;
-      font-size: 1.2rem;
-      margin-top: 8px;
-      font-family: 'Inter', sans-serif;
-      font-style: normal;
-      font-weight: 400;
-    }
-    
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .two-col img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .two-col h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      margin-bottom: 16px;
-      font-style: italic;
-    }
-    
-    .icon-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-    }
-    .icon-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-    .icon-item .icon {
-      font-size: 2rem;
-      flex-shrink: 0;
-    }
-    .icon-item h3 {
-      font-size: 1rem;
-      margin: 0 0 4px 0;
-      font-weight: 600;
-    }
-    .icon-item p {
-      font-size: 0.9rem;
-      margin: 0;
-      color: var(--text-light);
-    }
-    
-    .founders-section {
-      background: var(--sage);
-      padding: 60px 24px;
-      margin: 60px 0;
-    }
-    .founders-section h2 {
-      text-align: center;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.5rem;
-      margin-bottom: 12px;
-      font-style: italic;
-      color: white;
-    }
-    .founders-section > p {
-      text-align: center;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 48px;
-    }
-    .founders-flex {
-      display: flex;
-      justify-content: center;
-      gap: 48px;
-      max-width: 1000px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-    }
-    .founder-item {
-      text-align: center;
-      max-width: 280px;
-    }
-    .founder-item img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 16px;
-      border: 4px solid white;
-    }
-    .founder-item .placeholder {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      margin: 0 auto 16px;
-      border: 4px solid white;
-    }
-    .founder-item h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      margin: 0 0 8px 0;
-      color: white;
-    }
-    .founder-item p {
-      font-size: 0.9rem;
-      line-height: 1.5;
-      color: rgba(255,255,255,0.95);
-    }
-    
-    .values-section {
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      gap: 40px;
-      align-items: center;
-      margin: 60px 0;
-    }
-    .values-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .value-item-check {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-    .value-item-check .icon {
-      font-size: 1.5rem;
-      color: var(--sage);
-      flex-shrink: 0;
-    }
-    .values-section img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    
-    .cta-bottom {
-      background: var(--sage);
-      color: white;
-      padding: 60px 24px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-bottom h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.5rem;
-      margin-bottom: 16px;
-      font-style: italic;
-    }
-    .cta-bottom p {
-      max-width: 600px;
-      margin: 0 auto 32px;
-      opacity: 0.95;
-    }
-    .cta-bottom .btn-group {
-      justify-content: center;
-    }
-    .cta-bottom .btn {
-      background: white;
-      color: var(--sage-dark);
-      border: 2px solid white;
-    }
-    .cta-bottom .btn-secondary {
-      background: transparent;
-      color: white;
-      border-color: rgba(255,255,255,0.6);
-    }
-    
-    @media (max-width: 768px) {
-      .two-col, .values-section {
-        grid-template-columns: 1fr;
-      }
-      .about-hero h1 {
-        font-size: 2.5rem;
-      }
-      .founders-flex {
-        gap: 32px;
-      }
-    }
-  </style>
 </head>
 <body>
 
+  <!-- NAVIGATION -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="logo.png" alt="Tail End Sanctuary" class="nav-logo-img">
-        <div class="nav-logo-text">TAIL END SANCTUARY<small>Peace · Dignity · Love</small></div>
+        <img src="logo.png" alt="Tail End Sanctuary Logo" class="nav-logo-img">
+        <div class="nav-logo-text">
+          Tail End Sanctuary
+          <small>LOVE. COMFORT. DIGNITY.</small>
+        </div>
       </a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About Us</a></li>
         <li><a href="dogs.html">Meet the Dogs</a></li>
         <li><a href="get-involved.html">Get Involved</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="btn btn-donate">Donate</a></li>
+        <li><a href="donate.html" class="btn btn-donate">♥ Donate</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- HERO -->
-  <div class="about-hero">
-    <div>
-      <h1>About Us<small>Tail End Sanctuary</small></h1>
+  <section class="hero-simple">
+    <img src="images/dogs/teddy.jpeg" alt="Senior dog resting" class="hero-bg">
+    <div class="container">
+      <div class="hero-content" style="max-width: 100%; text-align: center;">
+        <h1>About Us</h1>
+        <p style="color: var(--text);">Giving senior dogs a peaceful, cared-for ending to their lives.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- OUR STORY -->
-  <section class="section section-cream">
+  <section class="section section-alt">
     <div class="container">
-      <div class="two-col">
-        <div>
-          <h2>Our Story</h2>
-          <p style="margin-bottom:16px">Tail End Sanctuary began with a pattern we could no longer ignore.</p>
-          <p style="margin-bottom:16px">In our community, people kept identifying older stray dogs living on the streets on their own—dogs who were no longer young, no longer wanted, and often struggling just to get through each day.</p>
-          <p style="margin-bottom:16px">They were easy to overlook, but impossible to forget once you truly saw them.</p>
-          <p>What started as concern turned into action. One dog led to another, and it became clear that these senior dogs needed something different—something beyond traditional rescue.</p>
-        </div>
-        <div>
-          <img src="images/dogs/teddy.jpeg" alt="Senior dog">
-        </div>
+      <div class="section-header">
+        <h2>Our Story</h2>
+      </div>
+      <div style="max-width: 840px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--text);">
+        <p style="margin-bottom: 20px;">At <strong>Tail End Sanctuary</strong>, our work is simple at its core: to give senior dogs a peaceful, cared-for ending to their lives.</p>
+        
+        <p style="margin-bottom: 20px;">This began with a pattern we could no longer ignore.</p>
+        
+        <p style="margin-bottom: 20px;">In our community, people kept identifying older stray dogs living on the streets on their own—dogs who were no longer young, no longer wanted, and often struggling just to get through each day.</p>
+        
+        <p style="margin-bottom: 20px;">They were easy to overlook, but impossible to forget once you truly saw them.</p>
+        
+        <p style="margin-bottom: 20px;">What started as concern turned into action. <em>One dog led to another, and it became clear that these senior dogs needed something different</em>—something beyond traditional rescue.</p>
       </div>
     </div>
   </section>
 
   <!-- WHAT WE DO -->
-  <section class="section section-alt">
+  <section class="section section-cream">
     <div class="container">
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;margin-bottom:16px;font-style:italic">What We Do</h2>
-      <p style="max-width:720px">Tail End Sanctuary provides a safe, stable environment for senior stray dogs in the Lake Chapala area of Mexico.</p>
-      <p style="max-width:720px;margin-top:12px">We focus on dogs who are unlikely to be adopted due to age, health, or condition. Instead of placing them back into an uncertain future, we offer consistent care, comfort, and a peaceful place to live out their remaining time.</p>
-      
-      <div class="icon-grid">
-        <div class="icon-item">
-          <div class="icon">🍽️</div>
-          <div>
-            <h3>Daily care and nourishment</h3>
+      <div class="section-header">
+        <h2>What We Do</h2>
+        <p>We provide a safe, stable environment for senior stray dogs in the Lake Chapala area of Mexico.</p>
+      </div>
+      <div style="max-width: 900px; margin: 0 auto;">
+        <p style="text-align: center; font-size: 1.05rem; margin-bottom: 40px; color: var(--text);">Instead of placing them back into uncertainty, we focus on comfort, care, and a sense of peace.</p>
+        
+        <div class="info-cards" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="info-card">
+            <ul style="list-style: none; padding: 0;">
+              <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 1.05rem;">
+                <span style="color: var(--sage); font-size: 1.3rem;">•</span>
+                Daily care and nourishment
+              </li>
+              <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 1.05rem;">
+                <span style="color: var(--sage); font-size: 1.3rem;">•</span>
+                Veterinary support and pain management
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="icon-item">
-          <div class="icon">💚</div>
-          <div>
-            <h3>A calm, secure environment</h3>
-          </div>
-        </div>
-        <div class="icon-item">
-          <div class="icon">🩺</div>
-          <div>
-            <h3>Veterinary support and pain management</h3>
-          </div>
-        </div>
-        <div class="icon-item">
-          <div class="icon">🤝</div>
-          <div>
-            <h3>Consistent human companionship</h3>
+          <div class="info-card">
+            <ul style="list-style: none; padding: 0;">
+              <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 1.05rem;">
+                <span style="color: var(--sage); font-size: 1.3rem;">•</span>
+                A calm, secure environment
+              </li>
+              <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 1.05rem;">
+                <span style="color: var(--sage); font-size: 1.3rem;">•</span>
+                Consistent human companionship
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -298,122 +104,85 @@
   </section>
 
   <!-- WHAT MAKES US DIFFERENT -->
-  <section class="section section-cream">
-    <div class="container">
-      <div class="two-col">
-        <div>
-          <h2>What Makes Us Different</h2>
-          <p style="margin-bottom:16px">We are not a traditional rescue.</p>
-          <p style="margin-bottom:16px">Our focus is not on numbers or turnover, but on quality of life—ensuring that each dog is safe, comfortable, and cared for.</p>
-          <p>For many of the dogs who come to us, this is the first time they experience consistent kindness.</p>
-        </div>
-        <div>
-          <img src="images/dogs/ringo.jpeg" alt="Senior dog">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW WE WORK -->
   <section class="section section-alt">
     <div class="container">
-      <div class="two-col">
-        <div>
-          <h2>How We Work</h2>
-          <p style="margin-bottom:16px">We are a small, hands-on sanctuary supported by caregivers, volunteers, and the community. Each dog receives individual attention based on their needs.</p>
-          <p style="margin-bottom:16px">We work with local veterinarians and rely on community support to continue providing care.</p>
-          <p>Transparency matters to us. Contributions go directly toward the daily care and medical needs of the dogs.</p>
-        </div>
-        <div>
-          <img src="images/dogs/pugsley.jpeg" alt="Senior dog">
-        </div>
+      <div class="section-header">
+        <h2>What Makes Us Different</h2>
+      </div>
+      <div style="max-width: 840px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--text);">
+        <p style="margin-bottom: 20px;">We are not a traditional rescue.</p>
+        
+        <p style="margin-bottom: 20px;">Our focus is not on numbers or turnover, but on the quality of <em>each dog's remaining time.</em></p>
+        
+        <p style="margin-bottom: 20px;">For many of the dogs who come to us, this is the first time they experience consistent kindness.</p>
       </div>
     </div>
   </section>
 
-  <!-- FOUNDERS -->
-  <div class="founders-section">
-    <h2>Our Founders</h2>
-    <p>Tail End Sanctuary was created by three individuals brought together through a shared concern for senior dogs in the Lake Chapala community.</p>
-    <div class="founders-flex">
-      <div class="founder-item">
-        <div class="placeholder">👩</div>
-        <h3>Jena Marie Olio</h3>
-        <p>Over 20 years in dog rescue and training, Jena runs a sanctuary for dogs whose owners have passed away. She has long been dedicated to caring for senior dogs in their final stage of life.</p>
-      </div>
-      <div class="founder-item">
-        <img src="images/founders/ronni-photo.jpeg" alt="Ronni Coppola">
-        <h3>Ronni Coppola</h3>
-        <p>A lifelong dog lover who has rescued and fostered some of the most vulnerable dogs in the community. Her compassion and hands-on care make a daily difference in the lives of our dogs.</p>
-      </div>
-      <div class="founder-item">
-        <img src="images/founders/juanita-photo.png" alt="Juanita Crampton">
-        <h3>Juanita Crampton</h3>
-        <p>Founder of the Tail End Planning program, helping pet owners prepare for their animals' future care. Her work led to a deeper focus on senior stray dogs and the creation of the sanctuary.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- VALUES -->
+  <!-- OUR FOUNDERS -->
   <section class="section section-cream">
     <div class="container">
-      <div class="values-section">
-        <div class="values-list">
-          <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;margin-bottom:20px;font-style:italic">Our Values</h2>
-          <div class="value-item-check">
-            <div class="icon">✓</div>
-            <div>
-              <h3>Every dog deserves care.</h3>
-              <p style="margin:0;color:var(--text-light);font-size:0.9rem">Regardless of age.</p>
-            </div>
+      <div class="section-header">
+        <h2>Our Founders</h2>
+        <p>Three people brought together by a shared concern for senior dogs.</p>
+      </div>
+      
+      <div class="founders-grid">
+        <div class="founder">
+          <div class="founder-photo">
+            <img src="images/founders/ronni-photo.jpeg" alt="Jena Marie Olio">
           </div>
-          <div class="value-item-check">
-            <div class="icon">💚</div>
-            <div>
-              <h3>Comfort and dignity matter</h3>
-              <p style="margin:0;color:var(--text-light);font-size:0.9rem">at every stage of life.</p>
-            </div>
-          </div>
-          <div class="value-item-check">
-            <div class="icon">✨</div>
-            <div>
-              <h3>Compassion makes a difference.</h3>
-            </div>
-          </div>
+          <h3>Jena Marie Olio</h3>
+          <p class="role">Over 20 years in dog rescue and training.</p>
         </div>
-        <div>
-          <img src="images/dogs/valentino.jpeg" alt="Senior dog">
+        
+        <div class="founder">
+          <div class="founder-photo">
+            <img src="images/founders/ronni-photo.jpeg" alt="Ronni Coppola">
+          </div>
+          <h3>Ronni Coppola</h3>
+          <p class="role">Lifelong dog lover and dedicated rescuer.</p>
         </div>
-        <div>
-          <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;margin-bottom:16px;font-style:italic">Related Work</h2>
-          <p style="margin-bottom:12px">Tail End Sanctuary is connected to the <strong>Tail End Planning</strong> program.</p>
-          <p style="margin-bottom:12px">Tail End Planning supports dogs whose owners have made arrangements for their care.</p>
-          <p>Tail End Sanctuary focuses on senior stray dogs who have no such support.</p>
-          <p style="margin-top:16px;color:var(--text-light);font-size:0.9rem">Though distinct, each serves a distinct purpose.</p>
+        
+        <div class="founder">
+          <div class="founder-photo">
+            <img src="images/founders/juanita-photo.png" alt="Juanita Crampton">
+          </div>
+          <h3>Juanita Crampton</h3>
+          <p class="role">Founder of the Tail End Planning program.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <div class="cta-bottom">
-    <h2>Be Part of This Work</h2>
-    <p>If this work speaks to you, there are ways to help. Every contribution makes a difference in the lives of our dogs.</p>
-    <div class="btn-group">
-      <a href="donate.html" class="btn btn-primary">DONATE</a>
-      <a href="get-involved.html" class="btn btn-secondary">GET INVOLVED</a>
+  <!-- BE PART OF THIS WORK -->
+  <section class="banner banner-sage">
+    <div class="container">
+      <h2>Be Part of This Work</h2>
+      <p>Helping a dog doesn't always mean changing their whole life. Sometimes it just means making their final chapter peaceful.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="donate.html" class="btn btn-donate">Support Our Work</a>
+        <a href="dogs.html" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.6); color: white;">Meet the Dogs</a>
+      </div>
     </div>
-  </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <h4>Tail End Sanctuary</h4>
-        <p style="font-size:0.9rem;margin-bottom:12px">Giving senior dogs a peaceful, loving ending to their lives in the Lake Chapala area of Mexico.</p>
-        <p class="footer-tagline">Peace · Dignity · Love</p>
+        <div class="footer-logo">
+          <img src="logo.png" alt="Tail End Sanctuary">
+          <div class="footer-logo-text">
+            Tail End Sanctuary
+            <small>LOVE. COMFORT. DIGNITY.</small>
+          </div>
+        </div>
+        <p class="footer-tagline">Lake Chapala, Mexico</p>
       </div>
+      
       <div>
-        <h4>Pages</h4>
+        <h4>Explore</h4>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -421,16 +190,33 @@
           <li><a href="get-involved.html">Get Involved</a></li>
         </ul>
       </div>
+      
       <div>
-        <h4>Support</h4>
+        <h4>Get Involved</h4>
         <ul class="footer-links">
           <li><a href="donate.html">Donate</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="get-involved.html">Sponsor a Dog</a></li>
+          <li><a href="get-involved.html">Volunteer</a></li>
+          <li><a href="contact.html">Wish List</a></li>
         </ul>
       </div>
+      
+      <div>
+        <h4>Connect</h4>
+        <div class="footer-email">
+          📧 <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Facebook">f</a>
+          <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+          <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Stay connected and get updates on our dogs and their stories.</p>
+      </div>
     </div>
+    
     <div class="footer-bottom">
-      <p>&copy; 2025 Tail End Sanctuary. All rights reserved.</p>
+      <p>© 2024 Tail End Sanctuary. All rights reserved. • Registered Nonprofit</p>
     </div>
   </footer>
 
