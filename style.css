@@ -274,7 +274,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .hero-simple .hero-bg {
-  opacity: 0.4;
+  opacity: 0.25;
+  object-fit: cover;
+  object-position: center 30%;
 }
 
 .hero-simple h1 {
@@ -284,6 +286,11 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-simple p {
   color: var(--text);
   font-size: 1.15rem;
+}
+
+.hero-simple .hero-content {
+  text-align: center;
+  max-width: 100%;
 }
 
 /* ========== SECTIONS ========== */
@@ -372,7 +379,9 @@ img { max-width: 100%; height: auto; display: block; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 30%;
   aspect-ratio: 4/3;
+  max-height: 420px;
 }
 
 .story-content h2 { margin-bottom: 20px; }
@@ -530,11 +539,19 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 40px 32px;
   text-align: center;
   transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .action-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
+}
+
+.action-card .btn,
+.action-card > div:last-child {
+  margin-top: auto;
 }
 
 .action-card .icon {
