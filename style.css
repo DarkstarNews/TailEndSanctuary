@@ -1011,7 +1011,7 @@ img { max-width: 100%; height: auto; display: block; }
   
   .nav-logo-text small {
     font-size: 0.5rem;
-    letter-spacing: 0.08em; /* Reduced from 0.18em */
+    letter-spacing: 0.08em;
     margin-top: 1px;
   }
 
@@ -1058,8 +1058,31 @@ img { max-width: 100%; height: auto; display: block; }
   
   .footer-logo-text small {
     font-size: 0.55rem;
-    letter-spacing: 0.08em; /* Reduced from 0.15em */
+    letter-spacing: 0.08em;
   }
+
+  /* Force ALL inline grids to single column on mobile */
+  .info-cards,
+  [style*="grid-template-columns: repeat(2"],
+  [style*="grid-template-columns: repeat(3"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Founders stack on mobile */
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Story blocks stack */
+  .story-block {
+    gap: 32px;
+  }
+
+  /* Hero min-heights reduced for mobile */
+  .hero-image { min-height: 400px; }
+  .hero-dark { min-height: 350px; }
+  .hero-simple { min-height: 300px; }
 }
 
 /* Extra small screens (iPhone SE, etc.) */
