@@ -34,7 +34,7 @@
 
   <!-- HERO -->
   <section class="hero-dark">
-    <img src="images/dogs/teddy.jpeg" alt="Senior dog at Tail End Sanctuary" class="hero-bg">
+    <img src="images/dogs/teddy-home.jpg" alt="Teddy at Tail End Sanctuary" class="hero-bg">
     <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-content">
@@ -49,7 +49,7 @@
     <div class="container">
       <div class="story-block">
         <div class="story-image">
-          <img src="images/dogs/teddy.jpeg" alt="Teddy">
+          <img src="images/dogs/teddy-home.jpg" alt="Teddy">
         </div>
         <div class="story-content">
           <h2 style="color: var(--brown);">For Dogs Like Teddy</h2>
@@ -63,47 +63,59 @@
     </div>
   </section>
 
-  <!-- DONATION SELECTOR -->
-  <section class="section section-cream">
+  <!-- WAYS TO GIVE -->
+  <section class="section section-cream" id="donate-now">
     <div class="container">
       <div class="section-header">
-        <h2 style="margin-bottom: 12px;">Make a Difference Today</h2>
-        <p>Your support brings comfort, care, and dignity to dogs in their final chapter.</p>
+        <h2 style="margin-bottom: 12px;">Ways to Give</h2>
+        <p>Every contribution goes directly to the dogs' care. Choose the method that works best for you.</p>
       </div>
 
-      <div class="donate-selector" id="donate-now">
-        <div class="gift-toggle">
-          <button class="gift-toggle-btn" onclick="selectType('onetime')">One-Time Donation</button>
-          <button class="gift-toggle-btn active" onclick="selectType('monthly')">Monthly Donation <span style="background: var(--brown); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; margin-left: 6px;">RECOMMENDED</span></button>
+      <div class="donation-methods">
+
+        <div class="method-card">
+          <span class="method-label">Credit Card</span>
+          <h4>Stripe</h4>
+          <p class="method-value">IL@veSenta1970</p>
+          <p class="method-detail">Secure online card payments.</p>
         </div>
 
-        <div class="amount-grid">
-          <div class="amount-card selected" onclick="selectAmount(25)">
-            <span class="amount">$25</span>
-            <p>Nourishing meals for a week</p>
-          </div>
-          <div class="amount-card" onclick="selectAmount(50)">
-            <span class="amount">$50</span>
-            <p>Pain relief and medication</p>
-          </div>
-          <div class="amount-card" onclick="selectAmount(100)">
-            <span class="amount">$100</span>
-            <p>A full month of daily care</p>
-          </div>
-          <div class="amount-card" onclick="selectAmount(250)">
-            <span class="amount">$250</span>
-            <p>Sponsor a dog's complete care</p>
-          </div>
+        <div class="method-card">
+          <span class="method-label">Online</span>
+          <h4>PayPal</h4>
+          <p class="method-value"><a href="https://www.paypal.me/JenaMarieOlio" target="_blank" rel="noopener">paypal.me/JenaMarieOlio</a></p>
+          <p class="method-detail">Send securely through PayPal.</p>
         </div>
 
-        <div style="text-align: center; margin-top: 16px; margin-bottom: 28px;">
-          <p style="font-size: 0.95rem; color: var(--text-light);">$ <input type="number" placeholder="Other" style="border: none; border-bottom: 2px solid var(--sage); width: 80px; padding: 6px; font-size: 1.1rem; text-align: center; background: transparent;"> Custom amount</p>
+        <div class="method-card">
+          <span class="method-label">U.S. Bank Transfer</span>
+          <h4>Zelle</h4>
+          <p class="method-value"><a href="tel:+12136666958">213-666-6958</a></p>
+          <p class="method-detail">Send directly from your bank.</p>
         </div>
 
-        <a href="#" class="btn btn-donate" style="width: 100%; justify-content: center; padding: 18px; font-size: 1.05rem;">DONATE SECURELY</a>
+        <div class="method-card">
+          <span class="method-label">Mexican Bank Transfer</span>
+          <h4>Inbursa</h4>
+          <dl>
+            <dt>Account</dt><dd>5002837818</dd>
+            <dt>CLABE</dt><dd>036320500283781811</dd>
+            <dt>Name</dt><dd>Jena Marie Olio</dd>
+          </dl>
+        </div>
 
-        <p style="text-align: center; font-size: 0.85rem; color: var(--text-light); margin-top: 20px;">Secure donation. Every contribution goes directly to the dogs' care.</p>
+        <div class="method-card featured">
+          <span class="method-label">For U.S. Tax-Advantaged Giving</span>
+          <h4>Bank of America</h4>
+          <dl>
+            <dt>EIN</dt><dd>99-1390093</dd>
+          </dl>
+          <p class="method-detail" style="margin-top: 12px;">Please contact <a href="mailto:events@tailendsanctuary.org">events@tailendsanctuary.org</a> for full tax-advantaged giving details.</p>
+        </div>
+
       </div>
+
+      <p style="text-align: center; font-size: 0.88rem; color: var(--text-light); margin-top: 36px; max-width: 640px; margin-left: auto; margin-right: auto;">Questions about giving? We're happy to help. Email <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a> and we'll walk you through it.</p>
     </div>
   </section>
 
@@ -214,23 +226,17 @@
         <h4>Get Involved</h4>
         <ul class="footer-links">
           <li><a href="donate.html">Donate</a></li>
-          <li><a href="get-involved.html">Sponsor a Dog</a></li>
           <li><a href="get-involved.html">Volunteer</a></li>
-          <li><a href="contact.html">Wish List</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      
+
       <div>
         <h4>Connect</h4>
         <div class="footer-email">
           <span style="font-weight: 600;">✉</span> <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a>
         </div>
-        <div class="social-icons">
-          <a href="#" class="social-icon" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="#" class="social-icon" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-          <a href="#" class="social-icon" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-        </div>
-        <p style="margin-top: 20px; font-size: 0.9rem;">Stay connected and get updates on our dogs and their stories.</p>
+        <p style="margin-top: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.6;">Email us to receive updates on our dogs and their stories.</p>
       </div>
     </div>
     
@@ -238,18 +244,6 @@
       <p>© 2026 Tail End Sanctuary. All rights reserved. • Registered Nonprofit</p>
     </div>
   </footer>
-
-  <script>
-    function selectType(type) {
-      document.querySelectorAll('.gift-toggle-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-    }
-    
-    function selectAmount(amount) {
-      document.querySelectorAll('.amount-card').forEach(card => card.classList.remove('selected'));
-      event.target.closest('.amount-card').classList.add('selected');
-    }
-  </script>
 
 </body>
 </html>
