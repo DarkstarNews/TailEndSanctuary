@@ -129,34 +129,34 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 96px;
+  height: 112px;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
-  font-size: 1.55rem;
+  font-size: 1.75rem;
   color: var(--sage-dark);
   letter-spacing: 0.005em;
 }
 
 .nav-logo-img {
-  width: 68px;
-  height: 68px;
+  width: 84px;
+  height: 84px;
   object-fit: contain;
 }
 
 .nav-logo-text small {
   display: block;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.22em;
   color: var(--text-light);
   text-transform: uppercase;
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 .nav-links {
@@ -216,6 +216,10 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-dark > .container,
 .hero-simple > .container {
   width: 100%;
+  max-width: 1400px;
+  padding: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-bg {
@@ -238,27 +242,25 @@ img { max-width: 100%; height: auto; display: block; }
   z-index: 1;
 }
 
-/* Home hero: Ringo is at ~32% horiz in the raw photo. Zoom the image (scale) and
-   translate it so Ringo lands in the RIGHT portion of the hero. Use transform on
-   the <img> because object-position can't exceed the container when aspect ratios
-   match. */
+/* Home hero: full-width bleed. Image covers the full hero. No dead zones. */
 .hero-image.hero-home {
   min-height: 640px;
 }
 .hero-image.hero-home .hero-overlay {
-  background: linear-gradient(to right, rgba(28,22,16,0.85) 0%, rgba(28,22,16,0.72) 22%, rgba(28,22,16,0.32) 42%, rgba(28,22,16,0.08) 62%, transparent 78%);
+  background: linear-gradient(to right, rgba(28,22,16,0.88) 0%, rgba(28,22,16,0.72) 24%, rgba(28,22,16,0.38) 44%, rgba(28,22,16,0.12) 62%, transparent 78%);
 }
 .hero-image.hero-home .hero-bg {
-  /* transform-origin: left center, scale 1.5 keeps left edge fixed.
-     translate(12%) shifts image right by 12% of its scaled width.
-     Result: Ringo's face (originally at 32% of image) lands at ~66% of viewport. */
-  transform: scale(1.5) translate(12%, 2%);
-  transform-origin: left center;
-  object-position: center center;
+  /* Use object-position to focus Ringo's face. Desktop & mobile both target eye line. */
+  transform: none;
+  object-fit: cover;
+  /* Desktop: keep Ringo right-of-text. Source eyes at 37% horiz: shift so he lands right side. */
+  object-position: 30% 28%;
+  width: 100%;
+  height: 100%;
 }
 .hero-image.hero-home .hero-content {
-  max-width: 480px;
-  padding-right: 60px;
+  max-width: 540px;
+  padding: 80px 40px 80px 48px;
   margin-left: 0;
 }
 .hero-image.hero-home .hero-content h1 {
@@ -269,21 +271,23 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 1.1rem;
 }
 
-/* Dogs hero (Pugsley). Shift Pugsley to the right so headline on left doesn't cover his face. */
+/* Dogs hero (Pugsley). Full-width bleed; image focuses right so text on left is clear. */
 .hero-image.hero-dogs {
   min-height: 560px;
 }
 .hero-image.hero-dogs .hero-overlay {
-  background: linear-gradient(to right, rgba(28,22,16,0.85) 0%, rgba(28,22,16,0.7) 22%, rgba(28,22,16,0.32) 42%, rgba(28,22,16,0.05) 65%, transparent 80%);
+  background: linear-gradient(to right, rgba(28,22,16,0.88) 0%, rgba(28,22,16,0.72) 24%, rgba(28,22,16,0.32) 44%, rgba(28,22,16,0.08) 62%, transparent 78%);
 }
 .hero-image.hero-dogs .hero-bg {
-  transform: scale(1.25) translate(15%, 2%);
-  transform-origin: left center;
-  object-position: center center;
+  transform: none;
+  object-fit: cover;
+  object-position: 70% center;
+  width: 100%;
+  height: 100%;
 }
 .hero-image.hero-dogs .hero-content {
-  max-width: 520px;
-  padding-right: 40px;
+  max-width: 540px;
+  padding: 80px 40px 80px 48px;
 }
 
 .hero-content {
@@ -349,7 +353,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-dark.hero-contact {
   min-height: 520px;
 }
-.hero-dark.hero-contact .hero-bg { object-position: 20% 30%; }
+.hero-dark.hero-contact .hero-bg { object-position: 50% 30%; }
 .hero-dark.hero-contact .hero-overlay {
   background: linear-gradient(to left, rgba(28,22,16,0.82) 0%, rgba(28,22,16,0.55) 32%, rgba(28,22,16,0.10) 62%, transparent 85%);
 }
@@ -1219,13 +1223,13 @@ img { max-width: 100%; height: auto; display: block; }
 
   /* Fix navigation logo text on mobile */
   .nav-logo {
-    font-size: 1.2rem;
-    gap: 12px;
+    font-size: 1.32rem;
+    gap: 13px;
   }
 
   .nav-logo-img {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
   }
 
   .nav-logo-text {
@@ -1234,12 +1238,12 @@ img { max-width: 100%; height: auto; display: block; }
   }
 
   .nav-logo-text small {
-    font-size: 0.52rem;
-    letter-spacing: 0.12em;
-    margin-top: 1px;
+    font-size: 0.55rem;
+    letter-spacing: 0.13em;
+    margin-top: 2px;
   }
 
-  .nav-inner { height: 86px; }
+  .nav-inner { height: 96px; }
 
   /* Contact hero: on mobile, don't push text to the right */
   .hero-dark.hero-contact .hero-content {
@@ -1275,10 +1279,17 @@ img { max-width: 100%; height: auto; display: block; }
   }
 
   /* On mobile the home hero's far-right pan hides Ringo behind the gradient.
-     Bring him back to view by softening the overlay and centering him. */
-  .hero-image.hero-home .hero-bg { object-position: 65% 28%; }
+     Bring him back to view by softening the overlay and centering him so BOTH eyes show. */
+  .hero-image.hero-home .hero-bg { object-position: 60% 30%; }
   .hero-image.hero-home .hero-overlay {
-    background: linear-gradient(to bottom, rgba(28,22,16,0.45) 0%, rgba(28,22,16,0.55) 55%, rgba(28,22,16,0.75) 100%);
+    background: linear-gradient(to bottom, rgba(28,22,16,0.40) 0%, rgba(28,22,16,0.50) 55%, rgba(28,22,16,0.72) 100%);
+  }
+
+  /* Contact mobile: bring Ringo's text back inside the viewport. */
+  .hero-dark.hero-contact .hero-content {
+    margin-right: 0 !important;
+    padding-right: 20px !important;
+    max-width: calc(100% - 40px) !important;
   }
 
   .hero-dark.hero-contact .hero-content {
@@ -1354,18 +1365,18 @@ img { max-width: 100%; height: auto; display: block; }
 /* Extra small screens (iPhone SE, etc.) */
 @media (max-width: 380px) {
   .nav-logo {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     gap: 10px;
   }
   
   .nav-logo-img {
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
   }
   
   .nav-logo-text small {
-    font-size: 0.45rem;
-    letter-spacing: 0.05em;
+    font-size: 0.48rem;
+    letter-spacing: 0.08em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
