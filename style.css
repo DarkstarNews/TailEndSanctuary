@@ -1281,20 +1281,22 @@ textarea:focus-visible {
   font-style: italic;
 }
 
-.method-card a {
+.method-card a:not(.btn) {
   color: var(--brown);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
   font-weight: 500;
 }
-.method-card a:hover { color: var(--terracotta); }
+.method-card a:not(.btn):hover { color: var(--terracotta); }
 
-.method-card a.btn,
-.method-card a.btn:hover {
-  color: var(--white);
-  text-decoration: none;
-  font-weight: 600;
+.method-card form {
+  display: grid;
+  margin-top: auto;
+}
+
+.method-card > .btn {
+  margin-top: auto;
 }
 
 /* ========== RESPONSIVE ========== */
