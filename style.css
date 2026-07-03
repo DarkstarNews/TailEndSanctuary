@@ -1290,6 +1290,13 @@ textarea:focus-visible {
 }
 .method-card a:hover { color: var(--terracotta); }
 
+.method-card a.btn,
+.method-card a.btn:hover {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 968px) {
   .story-block,
