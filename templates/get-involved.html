@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Help give senior stray dogs the comfort and dignity they deserve — donate, give monthly, spread the word, or stay in touch with Tail End Sanctuary.">
+  <title>Get Involved — Tail End Sanctuary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="redesign.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="{{site.logo}}" alt="" class="nav-logo-img">
+        <span class="nav-logo-text">Tail End Sanctuary</span>
+      </a>
+      <button class="nav-toggle" onclick="var l=document.querySelector('.nav-links');l.classList.toggle('open');this.setAttribute('aria-expanded',l.classList.contains('open'))" aria-expanded="false" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="dogs.html">Meet the Dogs</a></li>
+        <li><a href="get-involved.html" class="active">Get Involved</a></li>
+        <li><a href="donate.html" class="btn btn-donate">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- HERO -->
+  <section class="hero-ed">
+    <div class="hero-grid container">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Lake Chapala · Mexico</span>
+        <h1>{{getInvolved.heroHeading}}</h1>
+      </div>
+      <div class="hero-plate-wrap reveal">
+        <img class="bare-media" src="{{getInvolved.heroImage.src}}" width="{{getInvolved.heroImage.width}}" height="{{getInvolved.heroImage.height}}" alt="{{getInvolved.heroImage.alt}}" style="max-width:560px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTION CARDS -->
+  <section class="section section-cream-dark" id="ways">
+    <div class="container">
+      <div class="sec-intro">
+        <span class="eyebrow">Ways to help</span>
+      </div>
+      <div class="action-cards">
+
+        <div class="action-card reveal">
+          <h3>{{getInvolved.card1Title}}</h3>
+          <p>{{{getInvolved.card1Text}}}</p>
+          <a href="donate.html" class="btn btn-donate">Donate Now</a>
+        </div>
+
+        <div class="action-card reveal">
+          <h3>{{getInvolved.card2Title}}</h3>
+          <p>{{{getInvolved.card2Text}}}</p>
+          <a href="donate.html" class="btn btn-donate">Become a Monthly Donor</a>
+        </div>
+
+        <div class="action-card reveal">
+          <h3>{{getInvolved.card3Title}}</h3>
+          <p>{{{getInvolved.card3Text}}}</p>
+          <span class="btn btn-muted">Social Links Coming Soon</span>
+        </div>
+
+        <div class="action-card reveal">
+          <h3>{{getInvolved.card4Title}}</h3>
+          <p>{{{getInvolved.card4Text}}}</p>
+          <form class="email-signup" action="https://formspree.io/f/xnjkaebg" method="POST">
+            <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_subject" value="New email signup — Tail End Sanctuary">
+            <label class="visually-hidden" for="signup-email">Email address</label>
+            <input type="email" id="signup-email" name="email" placeholder="you@email.com" autocomplete="email" required>
+            <button type="submit" class="btn btn-donate">Join</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="banner banner-sage">
+    <div class="container">
+      <h2>{{getInvolved.closingHeading}}</h2>
+      <p>{{{getInvolved.closingText}}}</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <img src="{{site.logo}}" alt="Tail End Sanctuary">
+        </div>
+        <p class="footer-tagline">Lake Chapala, Mexico</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="dogs.html">Meet the Dogs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <div class="footer-email">
+          <span style="font-weight: 600;">✉</span> <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a>
+        </div>
+        <p style="margin-top: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.6;">Email us to receive updates on our dogs and their stories.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tail End Sanctuary. All rights reserved. • Registered Nonprofit</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        els.forEach(function(e){ e.classList.add('in'); }); return;
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, {threshold:0.12});
+      els.forEach(function(e){ io.observe(e); });
+    })();
+  </script>
+
+  <script>
+    (function(){
+      var f=document.querySelector('form.email-signup');
+      if(!f) return;
+      f.addEventListener('submit', function(e){
+        e.preventDefault();
+        if(f.action.indexOf('REPLACE_WITH_ID')>-1){ alert('Signup form not configured yet.'); return; }
+        var btn=f.querySelector('button'); if(btn){ btn.disabled=true; btn.textContent='Joining…'; }
+        fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+          .then(function(r){
+            if(r.ok){ f.innerHTML='<p class="signup-thanks">Thank you — you\'re on the list. \uD83D\uDC3E</p>'; }
+            else { r.json().then(function(d){ alert((d.errors&&d.errors[0]&&d.errors[0].message)||'Something went wrong. Please email info@tailendsanctuary.org.'); }); if(btn){btn.disabled=false;btn.textContent='Join';} }
+          })
+          .catch(function(){ alert('Something went wrong. Please email info@tailendsanctuary.org.'); if(btn){btn.disabled=false;btn.textContent='Join';} });
+      });
+    })();
+  </script>
+</body>
+</html>

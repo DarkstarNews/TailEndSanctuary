@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tail End Sanctuary gives lifelong care to senior stray dogs in the Lake Chapala area of Mexico — safety, comfort, compassion, and dignity in their final chapter.">
+  <title>Tail End Sanctuary — Where Every Dog's Final Chapter is Filled with Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="redesign.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="{{site.logo}}" alt="" class="nav-logo-img">
+        <span class="nav-logo-text">Tail End Sanctuary</span>
+      </a>
+      <button class="nav-toggle" onclick="var l=document.querySelector('.nav-links');l.classList.toggle('open');this.setAttribute('aria-expanded',l.classList.contains('open'))" aria-expanded="false" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="dogs.html">Meet the Dogs</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="donate.html" class="btn btn-donate">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- HERO -->
+  <section class="hero-ed">
+    <div class="hero-grid container">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Lake Chapala · Mexico</span>
+        <h1>{{home.heroHeading}}</h1>
+      </div>
+      <div class="hero-plate-wrap reveal">
+        <img class="bare-media" src="{{home.heroImage.src}}" width="{{home.heroImage.width}}" height="{{home.heroImage.height}}" alt="{{home.heroImage.alt}}">
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTS BAND -->
+  <section class="factsband">
+    <div class="facts-inner">
+{{#each home.facts}}
+      <div class="fact"><span class="fig">{{fig}}</span><span class="lbl">{{lbl}}</span></div>
+{{/each}}
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="section section-cream">
+    <div class="container narrow center">
+      <span class="eyebrow">Our mission</span>
+      <p class="lead">{{{home.missionText}}}</p>
+    </div>
+  </section>
+
+  <!-- FEATURED RESIDENT -->
+  <section class="section section-cream-dark">
+    <div class="container">
+      <div class="feature-row reveal">
+        <div class="feature-media">
+          <video class="bare-media" poster="images/teddy-poster.jpg" controls muted loop playsinline preload="metadata" width="576" height="556" style="max-width:430px;">
+            <source src="images/teddy.mp4" type="video/mp4">
+            <img src="images/dogs/teddy-2026.jpg" alt="Teddy, a senior rescue dog at Tail End Sanctuary">
+          </video>
+        </div>
+        <div class="feature-text">
+          <span class="eyebrow">Featured resident</span>
+          <h2>{{home.teddyHeading}}</h2>
+          <p>{{{home.teddyPara1}}}</p>
+          <p>{{{home.teddyPara2}}}</p>
+          <p>{{{home.teddyPara3}}}</p>
+          <a href="donate.html" class="btn btn-donate">{{home.teddyButton}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PULLQUOTE -->
+  <section class="section section-cream">
+    <div class="container">
+      <blockquote class="pullquote reveal"><p>{{home.pullquote}}</p></blockquote>
+    </div>
+  </section>
+
+  <!-- WHAT MOTIVATES US -->
+  <section class="section section-cream-dark">
+    <div class="container">
+      <div class="feature-row reverse reveal">
+        <div class="feature-media">
+          <img class="bare-media" src="{{home.motivatesImage.src}}" width="{{home.motivatesImage.width}}" height="{{home.motivatesImage.height}}" alt="{{home.motivatesImage.alt}}" style="max-width:520px;">
+        </div>
+        <div class="feature-text">
+          <span class="eyebrow">What motivates us</span>
+          <h2>{{home.motivatesHeading}}</h2>
+          <p>{{{home.motivatesPara1}}}</p>
+          <p>{{{home.motivatesPara2}}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="banner banner-sage">
+    <div class="container">
+      <h2>{{home.bannerHeading}}</h2>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="donate.html" class="btn btn-donate">Donate</a>
+        <a href="dogs.html" class="btn btn-dog">Meet the Dogs</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <img src="{{site.logo}}" alt="Tail End Sanctuary">
+        </div>
+        <p class="footer-tagline">Lake Chapala, Mexico</p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="dogs.html">Meet the Dogs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Connect</h4>
+        <div class="footer-email">
+          <span style="font-weight: 600;">✉</span> <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a>
+        </div>
+        <p style="margin-top: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.6;">Email us to receive updates on our dogs and their stories.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Tail End Sanctuary. All rights reserved. • Registered Nonprofit</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        els.forEach(function(e){ e.classList.add('in'); }); return;
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, {threshold:0.12});
+      els.forEach(function(e){ io.observe(e); });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+{
+  "site": {
+    "logo": "images/logo-full.png"
+  },
+  "home": {
+    "heroHeading": "Where every dog's final chapter is filled with love",
+    "heroImage": {
+      "src": "images/home-hero.jpg",
+      "width": 1280,
+      "height": 890,
+      "alt": "A senior dog resting at Tail End Sanctuary in Lake Chapala, Mexico"
+    },
+    "facts": [
+      { "fig": "Since 2022", "lbl": "caring for senior strays" },
+      { "fig": "15 dogs", "lbl": "given a home so far" },
+      { "fig": "For life", "lbl": "lifelong care, never alone" },
+      { "fig": "Ajijic", "lbl": "Lake Chapala, Mexico" }
+    ],
+    "missionText": "To give lifelong care to senior stray dogs who have nowhere else to go — safety, comfort, compassion, and the dignity every dog deserves.",
+    "teddyHeading": "Meet Teddy",
+    "teddyPara1": "Teddy was found wandering the streets at 10 years old—tired, alone, and in pain. <strong>He has cancer.</strong>",
+    "teddyPara2": "But today, Teddy is safe. He has a warm bed, gentle medical care, and people who sit with him, comfort him, and make sure he is never alone again.",
+    "teddyPara3": "Dogs like Teddy are not defined by how they suffered—but by how they are loved in the time they have left.",
+    "teddyButton": "Help dogs like Teddy",
+    "pullquote": "A life that was invisible is finally seen.",
+    "motivatesHeading": "Seen at last",
+    "motivatesPara1": "Many Mexican street dogs like Valentino never reach their senior years. Those who do have often endured years of hardship, scavenging to survive. When age slows them down, they can no longer fend for themselves.",
+    "motivatesPara2": "That's where Tail End Sanctuary steps in — a soft place to rest weary bones, nourishing meals, and the companionship every dog deserves.",
+    "motivatesImage": {
+      "src": "images/dogs/valentino-2026.jpg",
+      "width": 1200,
+      "height": 995,
+      "alt": "Valentino, a senior dog rescued from a highway"
+    },
+    "bannerHeading": "You can give a dog a peaceful final chapter."
+  },
+  "about": {
+    "heroHeading": "About Tail End Sanctuary",
+    "heroImage": {
+      "src": "images/about-cindy.jpg",
+      "width": 900,
+      "height": 1200,
+      "alt": "Cindy, a happy senior dog at Tail End Sanctuary"
+    },
+    "storyHeading": "How Tail End began",
+    "storyPara1": "Jena Marie Olio, professional dog trainer and passionate advocate for dogs and dog rescue, said “yes” to Ringo in 2022. Ringo, a sick older dog, was orphaned when his owner died unexpectedly. Jena, with a heart for older dogs, lovingly cared for Ringo in her home for two years until his death.",
+    "storyPara2": "She had no financial support for him, or for the several other old dogs she took in over the next few years. In that time, Tail End Sanctuary began to take shape as a separate casita on Jena's property — a place for pet owners who plan ahead for their dogs to be cared for when they no longer can. And a member of the Ajijic community began to personally sponsor old, sick street dogs who had nowhere else to go.",
+    "storySubheading": "One dog led to another",
+    "storyPara3": "In our community, the Lake Chapala area of Mexico, people keep identifying older stray dogs living on the street on their own — dogs who are unwanted, no longer young, and often struggling just to get through each day.",
+    "storyPara4": "They are easy to overlook but impossible to forget once you truly see them.",
+    "storyPara5": "What started as concern turned into action — a small, home-based sanctuary devoted to care beyond traditional rescue. The focus is on the quality of each dog's remaining time. For these old street dogs, it is the first time they experience consistent kindness. The first time somebody notices they are in pain. The first time someone stays.",
+    "storyPara6": "What began as a small home caring for 15 dogs is growing to make room for more of these old souls who wander the streets of our community.",
+    "pullquote": "We measure success in peaceful days.",
+    "foundersHeading": "Three people, one promise",
+    "foundersText": "Brought together by a shared concern for senior dogs.",
+    "bannerHeading": "Be Part of This Work",
+    "bannerText": "Helping a dog doesn't always mean changing their whole life. Sometimes it just means making their final chapter peaceful and filled with love."
+  },
+  "founders": [
+    {
+      "name": "Jena Marie Olio",
+      "photo": { "src": "images/founders/jena-photo.png", "alt": "Jena Marie Olio" },
+      "role": "Over 20 years in dog rescue and training, Jena runs a sanctuary for dogs whose owners have passed away. She has long been dedicated to caring for senior dogs in their final stage of life."
+    },
+    {
+      "name": "Ronni Coppola",
+      "photo": { "src": "images/founders/ronni-new.jpeg", "alt": "Ronni Coppola" },
+      "role": "A lifelong dog lover who has rescued and fostered some of the most vulnerable dogs in the community. Her compassion and hands-on care make a daily difference in the lives of our dogs."
+    },
+    {
+      "name": "Juanita Crampton",
+      "photo": { "src": "images/founders/juanita-cropped.jpeg", "alt": "Juanita Crampton" },
+      "role": "Founder of the Tail End Planning program, helping pet owners prepare for their animals' future care. Her work led to a deeper focus on senior stray dogs and the creation of the sanctuary."
+    }
+  ],
+  "dogsPage": {
+    "heroHeading": "Meet the Dogs",
+    "heroImage": {
+      "src": "images/dogs/pugsley-2026.jpg",
+      "width": 1418,
+      "height": 1600,
+      "alt": "Pugsley, a senior dog at Tail End Sanctuary"
+    },
+    "bannerHeading": "You can help them live their best days.",
+    "bannerText": "With your support, we can keep giving these dogs the love, care, and comfort they deserve."
+  },
+  "dogs": [
+    {
+      "name": "Teddy",
+      "meta": "Age 10 | Rescued from the street",
+      "photo": { "src": "images/dogs/teddy-2026.jpg", "alt": "Teddy" },
+      "story": "Teddy was found wandering alone, a 10 year old senior stray dog in pain. He had been living in a small Mexican village with no one to notice or care for him. He was discovered by a young couple who chose to notice him and bring him to the attention of Tail End Sanctuary. Teddy has been diagnosed with Cancer. He is receiving medical attention and loving care, never alone again to fend for himself."
+    },
+    {
+      "name": "Nita",
+      "meta": "Senior | Rescued from the street",
+      "photo": { "src": "images/dogs/nita.jpg", "alt": "Nita, a senior blind white shepherd at Tail End Sanctuary" },
+      "story": "Nita was found late one night in Ajijic. She was obviously blind and unaware she was lying in the middle of the street. A kind neighbor led this beautiful white shepherd to safety for the night. Nita was dirty, skin and bone and truly lost. The following day Nita was taken to the vet then directly to Tail End Sanctuary where she was welcomed and cared for with great love and devotion."
+    },
+    {
+      "name": "Valentino",
+      "meta": "Age 8 | Rescued from the street",
+      "photo": { "src": "images/dogs/valentino-2026.jpg", "alt": "Valentino" },
+      "story": "Valentino was found wandering in the middle of a highway beside himself with fear. A kind person opened her passenger door and he jumped in. We expected that he would be an easy dog to place in a home. Then he was diagnosed with cancer. He is being treated and is expected to make a full recovery. Had he not hopped in that car he would surely have died a slow and agonizing death."
+    },
+    {
+      "name": "Coffee",
+      "meta": "Age 10 | Rescued from the street",
+      "photo": { "src": "images/dogs/coffee-2026.jpg", "alt": "Coffee" },
+      "story": "Coffee had an owner once. He roamed the streets during the day, neglected, and likely hit by a car with no medical intervention, leaving him crippled. He was one of a pack of four. When the owner died, they were all left homeless. Eventually Coffee was sent to a rescue where they determined he should be euthanized—an older dog, unadoptable with his wonky gait. Fortunately he was accepted into Tail End Sanctuary where he could be appreciated for his sweet nature, where he could be seen beyond his age and his physical condition. He continues to be loved for his own unique nature, hobbling about with a love of life."
+    },
+    {
+      "name": "Benito",
+      "meta": "Age 8 | Rescued from the street",
+      "photo": { "src": "images/dogs/benito.png", "alt": "Benito" },
+      "story": "Benito lived with a homeless person until that person disappeared. He was in terrible condition when rescued but has been nursed back to health. This little pittie has proven that you can teach an old dog new tricks. He has learned to be quite a snuggler and likes nothing better than curling up next to you on the couch."
+    },
+    {
+      "name": "Chester",
+      "meta": "Age 10 | Rescued from the street",
+      "photo": { "src": "images/dogs/chester.jpeg", "alt": "Chester" },
+      "story": "Chester was found on the street at age 10 with a severe skin condition and a defeated spirit. With his scarred face, torn ear, and missing front teeth, he likely had a life as a bait dog used to train fighting dogs. He was fearful and resisted being caught. Several Mexican boys were offered some pesos to find him and bring him to the rescuer. They were successful and from then on Chester had a life filled with care and love. He had a life of extremes, first with fear and aggression, then with love and compassion."
+    }
+  ],
+  "donate": {
+    "heroHeading": "Their next chapter starts with you",
+    "heroImage": {
+      "src": "images/donate.jpg",
+      "width": 1400,
+      "height": 1432,
+      "alt": "A senior dog resting at Tail End Sanctuary"
+    },
+    "gift1Title": "Food & nutrition",
+    "gift1Text": "Nourishing daily meals for dogs who once had to scavenge just to survive.",
+    "gift2Title": "Veterinary care",
+    "gift2Text": "Vet visits, medication, and gentle pain management for aging bodies.",
+    "gift3Title": "A warm bed for life",
+    "gift3Text": "A safe, comfortable place to rest — for the rest of their days."
+  },
+  "getInvolved": {
+    "heroHeading": "Help give a senior dog a soft landing",
+    "heroImage": {
+      "src": "images/senta.jpg",
+      "width": 1600,
+      "height": 1146,
+      "alt": "Senta, a senior dog at Tail End Sanctuary"
+    },
+    "card1Title": "Donate",
+    "card1Text": "A single donation can change a dog's life. Your donation provides food, medical care, and a peaceful place to rest.",
+    "card2Title": "Give Monthly",
+    "card2Text": "Monthly support allows us to plan ahead and say yes to the next dog in need.",
+    "card3Title": "Spread the Word",
+    "card3Text": "A shared post reaches someone like you who cares.",
+    "card4Title": "Stay in Touch",
+    "card4Text": "Stay connected for updates on the sanctuary and our dogs.",
+    "closingHeading": "Every Act of Kindness Matters",
+    "closingText": "Whether you give once, give monthly, or simply share their stories — you are part of giving these dogs the dignity they deserve."
+  }
+}

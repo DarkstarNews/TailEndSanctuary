@@ -1,0 +1,13 @@
+name = "tailend-editor"
+main = "src/index.js"
+compatibility_date = "2026-06-01"
+
+[vars]
+GITHUB_REPO = "RyanDavis23/TailEndSanctuary"
+GITHUB_BRANCH = "main"
+ALLOWED_ORIGINS = "https://tailendsanctuary.org,https://www.tailendsanctuary.org,http://localhost:8000"
+
+# Secrets (set these with `wrangler secret put <NAME>` — never commit them):
+#   SITE_PASSWORD   the shared password the editors will type in
+#   SESSION_SECRET  any long random string (e.g. `openssl rand -hex 32`)
+#   GITHUB_TOKEN    fine-grained PAT, Contents: Read & Write on this repo only

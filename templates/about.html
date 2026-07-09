@@ -18,7 +18,7 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo-full.png" alt="" class="nav-logo-img">
+        <img src="{{site.logo}}" alt="" class="nav-logo-img">
         <span class="nav-logo-text">Tail End Sanctuary</span>
       </a>
       <button class="nav-toggle" onclick="var l=document.querySelector('.nav-links');l.classList.toggle('open');this.setAttribute('aria-expanded',l.classList.contains('open'))" aria-expanded="false" aria-label="Toggle menu">☰</button>
@@ -39,10 +39,10 @@
     <div class="hero-grid container">
       <div class="hero-copy reveal">
         <span class="eyebrow">Lake Chapala · Mexico</span>
-        <h1>About Tail End Sanctuary</h1>
+        <h1>{{about.heroHeading}}</h1>
       </div>
       <div class="hero-plate-wrap reveal">
-        <img class="bare-media" src="images/about-cindy.jpg" width="900" height="1200" alt="Cindy, a happy senior dog at Tail End Sanctuary" style="max-width:440px;">
+        <img class="bare-media" src="{{about.heroImage.src}}" width="{{about.heroImage.width}}" height="{{about.heroImage.height}}" alt="{{about.heroImage.alt}}" style="max-width:440px;">
       </div>
     </div>
   </section>
@@ -50,15 +50,15 @@
   <!-- OUR STORY -->
   <section class="section section-cream-dark">
     <div class="container narrow">
-      <div class="sec-intro"><span class="eyebrow">Our story</span><h2>How Tail End began</h2></div>
+      <div class="sec-intro"><span class="eyebrow">Our story</span><h2>{{about.storyHeading}}</h2></div>
       <div style="font-size:1.08rem; line-height:1.9; color:var(--text);">
-        <p style="margin-bottom:22px;">Jena Marie Olio, professional dog trainer and passionate advocate for dogs and dog rescue, said “yes” to Ringo in 2022. Ringo, a sick older dog, was orphaned when his owner died unexpectedly. Jena, with a heart for older dogs, lovingly cared for Ringo in her home for two years until his death.</p>
-        <p style="margin-bottom:22px;">She had no financial support for him, or for the several other old dogs she took in over the next few years. In that time, Tail End Sanctuary began to take shape as a separate casita on Jena's property — a place for pet owners who plan ahead for their dogs to be cared for when they no longer can. And a member of the Ajijic community began to personally sponsor old, sick street dogs who had nowhere else to go.</p>
-        <h3 style="font-size:1.7rem; margin:38px 0 18px; color:var(--sage-dark);">One dog led to another</h3>
-        <p style="margin-bottom:22px;">In our community, the Lake Chapala area of Mexico, people keep identifying older stray dogs living on the street on their own — dogs who are unwanted, no longer young, and often struggling just to get through each day.</p>
-        <p style="margin-bottom:22px;">They are easy to overlook but impossible to forget once you truly see them.</p>
-        <p style="margin-bottom:22px;">What started as concern turned into action — a small, home-based sanctuary devoted to care beyond traditional rescue. The focus is on the quality of each dog's remaining time. For these old street dogs, it is the first time they experience consistent kindness. The first time somebody notices they are in pain. The first time someone stays.</p>
-        <p style="margin-bottom:0;">What began as a small home caring for 15 dogs is growing to make room for more of these old souls who wander the streets of our community.</p>
+        <p style="margin-bottom:22px;">{{{about.storyPara1}}}</p>
+        <p style="margin-bottom:22px;">{{{about.storyPara2}}}</p>
+        <h3 style="font-size:1.7rem; margin:38px 0 18px; color:var(--sage-dark);">{{about.storySubheading}}</h3>
+        <p style="margin-bottom:22px;">{{{about.storyPara3}}}</p>
+        <p style="margin-bottom:22px;">{{{about.storyPara4}}}</p>
+        <p style="margin-bottom:22px;">{{{about.storyPara5}}}</p>
+        <p style="margin-bottom:0;">{{{about.storyPara6}}}</p>
       </div>
     </div>
   </section>
@@ -66,7 +66,7 @@
   <!-- PULLQUOTE -->
   <section class="section section-sage">
     <div class="container">
-      <blockquote class="pullquote reveal"><p>We measure success in peaceful days.</p></blockquote>
+      <blockquote class="pullquote reveal"><p>{{about.pullquote}}</p></blockquote>
     </div>
   </section>
 
@@ -75,31 +75,19 @@
     <div class="container">
       <div class="sec-intro">
         <span class="eyebrow">Our founders</span>
-        <h2>Three people, one promise</h2>
-        <p>Brought together by a shared concern for senior dogs.</p>
+        <h2>{{about.foundersHeading}}</h2>
+        <p>{{about.foundersText}}</p>
       </div>
       <div class="founders-grid">
+{{#each founders}}
         <div class="founder reveal">
           <div class="founder-photo">
-            <img src="images/founders/jena-photo.png" alt="Jena Marie Olio">
+            <img src="{{photo.src}}" alt="{{photo.alt}}">
           </div>
-          <h3>Jena Marie Olio</h3>
-          <p class="role">Over 20 years in dog rescue and training, Jena runs a sanctuary for dogs whose owners have passed away. She has long been dedicated to caring for senior dogs in their final stage of life.</p>
+          <h3>{{name}}</h3>
+          <p class="role">{{{role}}}</p>
         </div>
-        <div class="founder reveal">
-          <div class="founder-photo">
-            <img src="images/founders/ronni-new.jpeg" alt="Ronni Coppola">
-          </div>
-          <h3>Ronni Coppola</h3>
-          <p class="role">A lifelong dog lover who has rescued and fostered some of the most vulnerable dogs in the community. Her compassion and hands-on care make a daily difference in the lives of our dogs.</p>
-        </div>
-        <div class="founder reveal">
-          <div class="founder-photo">
-            <img src="images/founders/juanita-cropped.jpeg" alt="Juanita Crampton">
-          </div>
-          <h3>Juanita Crampton</h3>
-          <p class="role">Founder of the Tail End Planning program, helping pet owners prepare for their animals' future care. Her work led to a deeper focus on senior stray dogs and the creation of the sanctuary.</p>
-        </div>
+{{/each}}
       </div>
     </div>
   </section>
@@ -107,8 +95,8 @@
   <!-- BE PART OF THIS WORK -->
   <section class="banner banner-sage">
     <div class="container">
-      <h2>Be Part of This Work</h2>
-      <p>Helping a dog doesn't always mean changing their whole life. Sometimes it just means making their final chapter peaceful and filled with love.</p>
+      <h2>{{about.bannerHeading}}</h2>
+      <p>{{{about.bannerText}}}</p>
       <div class="btn-group" style="justify-content: center;">
         <a href="donate.html" class="btn btn-donate">Support Our Work</a>
         <a href="dogs.html" class="btn btn-dog">Meet the Dogs</a>
@@ -123,7 +111,7 @@
     <div class="footer-inner">
       <div>
         <div class="footer-logo">
-          <img src="images/logo-full.png" alt="Tail End Sanctuary">
+          <img src="{{site.logo}}" alt="Tail End Sanctuary">
         </div>
         <p class="footer-tagline">Lake Chapala, Mexico</p>
       </div>

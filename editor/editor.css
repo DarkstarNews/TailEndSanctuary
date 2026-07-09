@@ -1,0 +1,258 @@
+/* Tail End Sanctuary website editor — designed for big touch targets,
+   large readable type, and zero jargon. iPad-first. */
+
+:root {
+  --cream: #FAF7F0;
+  --cream-dark: #F1EBDF;
+  --sage: #4E5E46;
+  --sage-dark: #3E4B38;
+  --sage-light: #E7ECE3;
+  --text: #3A352F;
+  --text-soft: #6B6459;
+  --white: #FFFFFF;
+  --danger: #9C4A38;
+  --shadow: 0 2px 10px rgba(58, 53, 47, 0.10);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 19px; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 20px 18px 80px;
+}
+
+h1, h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--sage-dark);
+  line-height: 1.15;
+}
+h1 { font-size: 2.1rem; margin-bottom: 8px; }
+h2 { font-size: 1.7rem; margin-bottom: 6px; }
+
+.subtitle { color: var(--text-soft); margin-bottom: 26px; font-size: 1rem; }
+
+/* ---- header bar ---- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+  min-height: 48px;
+}
+.topbar .hello { color: var(--text-soft); font-size: 0.95rem; text-align: right; }
+
+.btn-back {
+  background: none;
+  border: none;
+  color: var(--sage);
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 14px 10px 0;
+}
+.btn-back::before { content: '← '; }
+
+/* ---- big menu buttons ---- */
+.big-btn {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  background: var(--white);
+  border: 2px solid var(--cream-dark);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 22px 20px;
+  margin-bottom: 14px;
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+.big-btn:active { transform: scale(0.985); }
+.big-btn .icon { font-size: 1.9rem; line-height: 1; flex: none; }
+.big-btn .hint { display: block; font-weight: 400; font-size: 0.92rem; color: var(--text-soft); margin-top: 3px; }
+
+/* ---- primary / secondary actions ---- */
+.btn-primary, .btn-secondary, .btn-danger {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 20px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 18px;
+}
+.btn-primary { background: var(--sage); color: var(--white); }
+.btn-primary:active { background: var(--sage-dark); }
+.btn-primary[disabled] { opacity: 0.45; cursor: default; }
+.btn-secondary { background: var(--white); color: var(--sage); border: 2px solid var(--sage); }
+.btn-danger { background: var(--white); color: var(--danger); border: 2px solid var(--danger); font-size: 1.05rem; padding: 16px; }
+
+/* ---- forms ---- */
+label.field-label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin: 22px 0 8px;
+}
+label.field-label .optional { font-weight: 400; color: var(--text-soft); }
+
+input[type="text"], input[type="password"], textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.1rem;
+  color: var(--text);
+  background: var(--white);
+  border: 2px solid #D8D0C0;
+  border-radius: 12px;
+  padding: 16px;
+}
+input:focus, textarea:focus { outline: 3px solid var(--sage-light); border-color: var(--sage); }
+textarea { min-height: 220px; line-height: 1.6; resize: vertical; }
+textarea.short { min-height: 120px; }
+
+/* ---- cards & lists ---- */
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 14px;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  background: var(--white);
+  border: 2px solid var(--cream-dark);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+.item-row img {
+  width: 86px;
+  height: 86px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex: none;
+  background: var(--cream-dark);
+}
+.item-row .sub { display: block; font-weight: 400; font-size: 0.9rem; color: var(--text-soft); margin-top: 2px; }
+.item-row .chev { margin-left: auto; color: var(--text-soft); font-size: 1.3rem; }
+
+.current-text {
+  background: var(--sage-light);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  color: var(--sage-dark);
+  margin-bottom: 4px;
+  white-space: pre-wrap;
+}
+
+/* ---- photos ---- */
+.photo-preview {
+  width: 100%;
+  max-height: 340px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: var(--cream-dark);
+  display: block;
+}
+.photo-caption { text-align: center; color: var(--text-soft); font-size: 0.92rem; margin: 8px 0 4px; }
+
+.file-label {
+  display: block;
+  text-align: center;
+  background: var(--white);
+  color: var(--sage);
+  border: 2px dashed var(--sage);
+  border-radius: 14px;
+  padding: 20px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 18px;
+}
+.file-label input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+
+/* ---- status screens ---- */
+.center-screen { text-align: center; padding-top: 40px; }
+.center-screen .emoji { font-size: 4rem; display: block; margin-bottom: 18px; }
+.center-screen p { font-size: 1.15rem; max-width: 460px; margin: 0 auto 10px; }
+
+.error-box {
+  background: #F7E8E4;
+  border: 2px solid var(--danger);
+  color: var(--danger);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 18px;
+  font-weight: 600;
+}
+
+.working {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--text-soft);
+  font-size: 1.15rem;
+}
+.working::before {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 18px;
+  border: 5px solid var(--cream-dark);
+  border-top-color: var(--sage);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.footer-help {
+  margin-top: 44px;
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+.footer-help a { color: var(--sage); }
+
+.small-link {
+  background: none;
+  border: none;
+  color: var(--text-soft);
+  font-family: inherit;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 8px;
+}

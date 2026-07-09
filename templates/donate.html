@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Support Tail End Sanctuary's senior dogs — give by card, PayPal, Zelle, or bank transfer. Every contribution goes directly to the dogs' care.">
+  <title>Donate — Tail End Sanctuary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="redesign.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="{{site.logo}}" alt="" class="nav-logo-img">
+        <span class="nav-logo-text">Tail End Sanctuary</span>
+      </a>
+      <button class="nav-toggle" onclick="var l=document.querySelector('.nav-links');l.classList.toggle('open');this.setAttribute('aria-expanded',l.classList.contains('open'))" aria-expanded="false" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="dogs.html">Meet the Dogs</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="donate.html" class="btn btn-donate active">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- HERO -->
+  <section class="hero-ed">
+    <div class="hero-grid container">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Lake Chapala · Mexico</span>
+        <h1>{{donate.heroHeading}}</h1>
+      </div>
+      <div class="hero-plate-wrap reveal">
+        <img class="bare-media" src="{{donate.heroImage.src}}" width="{{donate.heroImage.width}}" height="{{donate.heroImage.height}}" alt="{{donate.heroImage.alt}}" style="max-width:480px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE YOUR GIFT GOES -->
+  <section class="section section-cream-dark">
+    <div class="container">
+      <div class="sec-intro">
+        <span class="eyebrow">Where your gift goes</span>
+        <h2>Straight to the dogs' care</h2>
+      </div>
+      <div class="giftgrid">
+        <div class="gift reveal">
+          <div class="gift-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4E5E46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 9 0 0 1-18 0Z"/><path d="M12 11V6"/><path d="M9.5 6.5c0-1.5 5-1.5 5 0"/></svg></div>
+          <h3>{{donate.gift1Title}}</h3>
+          <p>{{{donate.gift1Text}}}</p>
+        </div>
+        <div class="gift reveal">
+          <div class="gift-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4E5E46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></div>
+          <h3>{{donate.gift2Title}}</h3>
+          <p>{{{donate.gift2Text}}}</p>
+        </div>
+        <div class="gift reveal">
+          <div class="gift-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4E5E46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-6 8 6"/><path d="M6 10v9h12v-9"/><path d="M9 19v-4a3 3 0 0 1 6 0v4"/></svg></div>
+          <h3>{{donate.gift3Title}}</h3>
+          <p>{{{donate.gift3Text}}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAYS TO GIVE -->
+  <section class="section section-cream" id="ways-to-give">
+    <div class="container">
+      <div class="sec-intro">
+        <span class="eyebrow">Ways to give</span>
+        <h2>Choose what works for you</h2>
+      </div>
+
+      <div class="donation-methods">
+
+        <div class="method-card">
+          <span class="method-label">Credit Card</span>
+          <h4>Stripe</h4>
+          <p class="method-detail">Give securely by debit or credit card in under a minute.</p>
+          <a href="https://donate.stripe.com/28E3cvfIee0naJV9nZaAw00" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Donate with Card</a>
+        </div>
+
+        <div class="method-card">
+          <span class="method-label">Online</span>
+          <h4>PayPal</h4>
+          <p class="method-detail">Give securely through PayPal.</p>
+          <form action="https://www.paypal.com/ncp/payment/LWG3S3P8HEMGE" method="post" target="_blank">
+            <button type="submit" class="btn btn-secondary">Donate with PayPal</button>
+          </form>
+        </div>
+
+        <div class="method-card">
+          <span class="method-label">U.S. Bank Transfer</span>
+          <h4>Zelle</h4>
+          <p class="method-value"><a href="tel:+12136666958">213-666-6958</a></p>
+          <p class="method-detail">Send directly from your bank.</p>
+        </div>
+
+        <div class="method-card">
+          <span class="method-label">Mexican Bank Transfer</span>
+          <h4>Inbursa</h4>
+          <dl>
+            <dt>Account</dt><dd>5002837818</dd>
+            <dt>CLABE</dt><dd>036320500283781811</dd>
+            <dt>Name</dt><dd>Jena Marie Olio</dd>
+          </dl>
+        </div>
+
+        <div class="method-card featured">
+          <span class="method-label">For U.S. Tax-Advantaged Giving</span>
+          <h4>Bank of America</h4>
+          <dl>
+            <dt>EIN</dt><dd>99-1390093</dd>
+          </dl>
+          <p class="method-detail" style="margin-top: 12px;">Please contact <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a> for full tax-advantaged giving details.</p>
+        </div>
+
+      </div>
+
+      <p style="text-align: center; font-size: 0.88rem; color: var(--text-light); margin-top: 36px; max-width: 640px; margin-left: auto; margin-right: auto;">Questions about giving? We're happy to help. Email <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a> and we'll walk you through it.</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <img src="{{site.logo}}" alt="Tail End Sanctuary">
+        </div>
+        <p class="footer-tagline">Lake Chapala, Mexico</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="dogs.html">Meet the Dogs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <div class="footer-email">
+          <span style="font-weight: 600;">✉</span> <a href="mailto:info@tailendsanctuary.org">info@tailendsanctuary.org</a>
+        </div>
+        <p style="margin-top: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.6;">Email us to receive updates on our dogs and their stories.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tail End Sanctuary. All rights reserved. • Registered Nonprofit</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        els.forEach(function(e){ e.classList.add('in'); }); return;
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, {threshold:0.12});
+      els.forEach(function(e){ io.observe(e); });
+    })();
+  </script>
+
+</body>
+</html>
