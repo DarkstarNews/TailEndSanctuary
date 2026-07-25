@@ -175,3 +175,14 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
 .section-sage{ background:var(--sage-dark); color:#fff; }
 .section-sage .pullquote{ border-left-color:rgba(255,255,255,0.55); }
 .section-sage .pullquote p{ color:#fff; }
+
+
+/* ---- Jul 13 round: name under bare hero photo ---- */
+.bare-figure{ margin:0; display:flex; flex-direction:column; align-items:center; }
+.media-name{
+  font-family:'Cormorant Garamond',serif; font-style:italic;
+  font-size:1.2rem; color:var(--text-light); margin-top:14px; text-align:center;
+}
+/* Footer logo bigger now that the tagline line is gone */
+.footer-logo img{ width:190px; }
+.footer-logo{ margin-bottom:0; }
