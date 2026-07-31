@@ -58,27 +58,28 @@
         <span class="eyebrow">Let us know about you</span>
       </div>
 
-       <form class="custom-form reveal" action="#" method="POST">
+      <!-- FORM instruction with a clean, single-column phone layout -->
+      <form class="custom-form custom-form--inverted reveal" action="#" method="POST">
         <div class="form-header">
           <h2>Bank Transfer Notification</h2>
           <p>Please let us know the details of your transfer so we can track your generous donation and send your receipt.</p>
         </div>
 
-        <div class="form-grid">
+        <div class="form-stack">
           <!-- Full Name -->
-          <div class="form-group col-full">
+          <div class="form-group">
             <label for="form-name">Full Name</label>
             <input type="text" id="form-name" name="fullname" placeholder="E.g., Maria Sanchez" required>
           </div>
 
           <!-- Email Address -->
-          <div class="form-group col-half">
+          <div class="form-group">
             <label for="form-email">Email Address</label>
             <input type="email" id="form-email" name="email" placeholder="E.g., maria@example.com" required>
           </div>
 
           <!-- Donation Amount -->
-          <div class="form-group col-half">
+          <div class="form-group">
             <label for="form-amount">Donation Amount (USD)</label>
             <div class="input-prefix-wrapper">
               <span class="input-prefix">$</span>
@@ -87,19 +88,19 @@
           </div>
 
           <!-- Mailing Address -->
-          <div class="form-group col-full">
+          <div class="form-group">
             <label for="form-address">Mailing Address</label>
             <textarea id="form-address" name="address" rows="3" placeholder="Street, Apt/Suite, City, State, ZIP/Postal Code, Country" required></textarea>
           </div>
 
           <!-- Intended Date of Transfer -->
-          <div class="form-group col-half">
+          <div class="form-group">
             <label for="form-date">Intended Date of Transfer</label>
             <input type="date" id="form-date" name="transfer_date" required>
           </div>
 
           <!-- Type of Transfer -->
-          <div class="form-group col-half">
+          <div class="form-group">
             <label>Type of Transfer</label>
             <div class="radio-group">
               <label class="radio-label">
