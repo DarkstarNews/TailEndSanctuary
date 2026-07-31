@@ -262,7 +262,7 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   /* Couleur inversée : identique au fond général de la page */
   background-color: var(--cream); 
   border: 1px solid rgba(78, 94, 70, 0.15);
-  border-radius: 8px;
+  border-radius: 50px;
   transition: border-color var(--transition), background-color var(--transition);
   -webkit-appearance: none;
 }
