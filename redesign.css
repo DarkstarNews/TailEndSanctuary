@@ -190,45 +190,47 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
 
 /* ============================================================
    Jul 30 round:
-   Tail End Sanctuary — Form Layout & Component Styling
-   Appended for the Bank Transfer implementation.
+   Tail End Sanctuary — Inverted 1/2 Width Layout
+   Emulates phone layout comfort on desktop viewports.
    ============================================================ */
 
-.custom-form {
-  max-width: 720px;
+.custom-form--inverted {
+  /* Prend exactement la moitié de l'espace de la grille (max 540px sur les 1080px globaux) */
+  width: 100%;
+  max-width: 540px; 
   margin: 0 auto;
-  padding: 48px;
-  background: #ffffff;
+  padding: 40px;
+  
+  /* Palette inversée : s'intègre au fond de la section */
+  background-color: var(--cream-dark);
   border-radius: 12px;
-  box-shadow: var(--shadow-plate), 0 0 0 1px var(--keyline);
+  box-shadow: none; /* Supprime l'effet d'ombrage blanc pour épouser le fond */
+  border: 1px solid rgba(78, 94, 70, 0.1);
 }
 
 .form-header {
-  margin-bottom: 36px;
+  margin-bottom: 32px;
   text-align: left;
 }
 
 .form-header h2 {
   margin-bottom: 10px;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   color: var(--sage-dark);
 }
 
 .form-header p {
   color: var(--text-light);
-  font-size: 1rem;
+  font-size: 0.98rem;
   line-height: 1.6;
 }
 
-/* Grille interne du formulaire */
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+/* Structure à colonne unique identique au mobile */
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
-
-.col-full { grid-column: span 2; }
-.col-half { grid-column: span 1; }
 
 .form-group {
   display: flex;
@@ -238,14 +240,14 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
 
 .form-group label {
   font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--sage-dark);
 }
 
-/* Champs textuels (Inputs, Textarea, Date) */
+/* Les champs prennent la couleur de fond de la page externe */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="date"],
@@ -256,19 +258,20 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   color: var(--text);
-  background-color: var(--cream);
-  border: 1px solid var(--cream-dark);
+  
+  /* Couleur inversée : identique au fond général de la page */
+  background-color: var(--cream); 
+  border: 1px solid rgba(78, 94, 70, 0.15);
   border-radius: 8px;
   transition: border-color var(--transition), background-color var(--transition);
   -webkit-appearance: none;
 }
 
-/* Alignement spécifique pour le champ Date sur iOS */
 .form-group input[type="date"] {
   min-height: 51px;
 }
 
-/* États interactifs des champs */
+/* États interactifs */
 .form-group input:hover,
 .form-group textarea:hover {
   border-color: var(--sage-light);
@@ -276,7 +279,7 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  background-color: #ffffff;
+  background-color: #ffffff; /* S'éclaire au blanc pur lors de la saisie */
   border-color: var(--sage);
   outline: none;
 }
@@ -287,7 +290,7 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   line-height: 1.6;
 }
 
-/* Préfixe monétaire USD ($) imbriqué */
+/* Gestion du symbole Dollar $ */
 .input-prefix-wrapper {
   position: relative;
   display: flex;
@@ -308,11 +311,11 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   padding-left: 36px !important;
 }
 
-/* Personnalisation élégante des boutons Radio */
+/* Boutons radio épurés */
 .radio-group {
   display: flex;
-  gap: 20px;
-  padding: 12px 0;
+  gap: 24px;
+  padding: 8px 0;
 }
 
 .radio-label {
@@ -329,14 +332,13 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
 .radio-label input[type="radio"] {
   position: absolute;
   opacity: 0;
-  cursor: pointer;
 }
 
 .radio-custom {
   width: 20px;
   height: 20px;
   background-color: var(--cream);
-  border: 1px solid var(--cream-dark);
+  border: 1px solid rgba(78, 94, 70, 0.2);
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -368,9 +370,9 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   display: block;
 }
 
-/* Boutons d'action */
+/* Bouton de validation */
 .form-actions {
-  margin-top: 40px;
+  margin-top: 36px;
   display: flex;
   justify-content: flex-start;
 }
@@ -379,28 +381,20 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   padding: 16px 40px;
 }
 
-/* Adaptabilité Mobile & Tablettes */
+/* Comportement sur mobiles et tablettes */
 @media (max-width: 768px) {
-  .custom-form {
-    padding: 32px 24px;
-  }
-  
-  .form-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .col-half {
-    grid-column: span 2;
+  .custom-form--inverted {
+    padding: 24px 16px;
+    border: none; /* Plus besoin de bordures sur petit écran */
+    background-color: transparent; /* Se fond complètement dans la page */
   }
   
   .radio-group {
     flex-direction: column;
     gap: 14px;
-    padding: 4px 0;
   }
   
   .form-actions .btn {
-    width: 100%;
+    width: 100%; /* Le bouton s'adapte à toute la largeur du téléphone */
   }
 }
