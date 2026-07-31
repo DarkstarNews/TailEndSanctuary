@@ -59,13 +59,18 @@
       </div>
 
       <!-- FORM instruction with a clean, single-column phone layout -->
-      <form class="custom-form custom-form--inverted reveal" action="https://formspree.io/f/xnjkaebg" method="POST">
+      <form class="custom-form custom-form--inverted reveal" action="https://formspree.io/f/mjgndnlw" method="POST">
         <div class="form-header">
           <h2>Bank Transfer Notification</h2>
           <p>Please complete the following form once you have submitted your bank transfer. This information enables us to acknowledge your donation and send you a tax-deductible receipt.</p>
         </div>
 
         <div class="form-stack">
+          
+          <!-- Formspree hidden info -->
+             <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+             <input type="hidden" name="_subject" value=« Bank Transfer Info — Tail End Sanctuary">
+          
           <!-- Full Name -->
           <div class="form-group">
             <label for="form-name">Full Name</label>
