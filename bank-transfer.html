@@ -194,10 +194,17 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const form = document.querySelector('.custom-form.custom-form--inverted');
+      const statusMessage = document.getElementById('form-status');
 
-      if (form) {
+      if (form && statusMessage) {
         form.addEventListener('submit', async (event) => {
-          event.preventDefault(); // Empêche la redirection vers le site de Formspree
+          event.preventDefault(); // Empêche la redirection
+        
+          // Réinitialisation de la zone de message à chaque tentative
+          statusMessage.style.display = 'none';
+          statusMessage.textContent = '';
+          statusMessage.style.backgroundColor = '';
+          statusMessage.style.color = '';
 
           const formData = new FormData(form);
 
@@ -211,18 +218,28 @@
             });
 
             if (response.ok) {
-              alert("Thank you. Your message was successfully sent");
-              form.reset(); // Vide les champs du formulaire après le succès
+              // Configuration du message de succès
+              statusMessage.textContent = "Thank you. Your message was successfully sent";
+              statusMessage.style.backgroundColor = "#e6f4ea"; // Fond vert clair
+              statusMessage.style.color = "#137333";           // Texte vert foncé
+              statusMessage.style.display = "block";
+            
+              form.reset(); // Vide le formulaire
             } else {
-              throw new Error('Formspree server error');
+              throw new Error('Formspree error');
             }
           } catch (error) {
-            alert("Something went wrong. Please email info@tailendsanctuary.org.");
+            // Configuration du message d'erreur
+            statusMessage.textContent = "Something went wrong. Please email info@tailendsanctuary.org.";
+            statusMessage.style.backgroundColor = "#fce8e6"; // Fond rouge clair
+            statusMessage.style.color = "#c5221f";           // Texte rouge foncé
+            statusMessage.style.display = "block";
           }
         });
       }
     });
   </script>
+
 
 </body>
 </html>
