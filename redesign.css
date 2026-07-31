@@ -186,3 +186,221 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
 /* Footer logo bigger now that the tagline line is gone */
 .footer-logo img{ width:190px; }
 .footer-logo{ margin-bottom:0; }
+
+
+/* ============================================================
+   Jul 30 round:
+   Tail End Sanctuary — Form Layout & Component Styling
+   Appended for the Bank Transfer implementation.
+   ============================================================ */
+
+.custom-form {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: var(--shadow-plate), 0 0 0 1px var(--keyline);
+}
+
+.form-header {
+  margin-bottom: 36px;
+  text-align: left;
+}
+
+.form-header h2 {
+  margin-bottom: 10px;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--sage-dark);
+}
+
+.form-header p {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Grille interne du formulaire */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.col-full { grid-column: span 2; }
+.col-half { grid-column: span 1; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+}
+
+/* Champs textuels (Inputs, Textarea, Date) */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  background-color: var(--cream);
+  border: 1px solid var(--cream-dark);
+  border-radius: 8px;
+  transition: border-color var(--transition), background-color var(--transition);
+  -webkit-appearance: none;
+}
+
+/* Alignement spécifique pour le champ Date sur iOS */
+.form-group input[type="date"] {
+  min-height: 51px;
+}
+
+/* États interactifs des champs */
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: var(--sage-light);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: #ffffff;
+  border-color: var(--sage);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+
+/* Préfixe monétaire USD ($) imbriqué */
+.input-prefix-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-prefix {
+  position: absolute;
+  left: 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+.input-prefix-wrapper input {
+  padding-left: 36px !important;
+}
+
+/* Personnalisation élégante des boutons Radio */
+.radio-group {
+  display: flex;
+  gap: 20px;
+  padding: 12px 0;
+}
+
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-label input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  background-color: var(--cream);
+  border: 1px solid var(--cream-dark);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  transition: border-color var(--transition), background-color var(--transition);
+}
+
+.radio-label:hover input[type="radio"] ~ .radio-custom {
+  border-color: var(--sage-light);
+}
+
+.radio-label input[type="radio"]:checked ~ .radio-custom {
+  background-color: #ffffff;
+  border-color: var(--terracotta);
+}
+
+.radio-custom::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--terracotta);
+}
+
+.radio-label input[type="radio"]:checked ~ .radio-custom::after {
+  display: block;
+}
+
+/* Boutons d'action */
+.form-actions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-actions .btn {
+  padding: 16px 40px;
+}
+
+/* Adaptabilité Mobile & Tablettes */
+@media (max-width: 768px) {
+  .custom-form {
+    padding: 32px 24px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .col-half {
+    grid-column: span 2;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    gap: 14px;
+    padding: 4px 0;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+}
