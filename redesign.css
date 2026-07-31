@@ -202,7 +202,7 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   padding: 40px;
   
   /* Palette inversée : s'intègre au fond de la section */
-  background-color: var(--cream-dark);
+  background-color: var(--cream);
   border-radius: 12px;
   box-shadow: none; /* Supprime l'effet d'ombrage blanc pour épouser le fond */
   border: 1px solid rgba(78, 94, 70, 0.1);
@@ -260,7 +260,7 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   color: var(--text);
   
   /* Couleur inversée : identique au fond général de la page */
-  background-color: var(--cream); 
+  background-color: var(--cream-dark); 
   border: 1px solid rgba(78, 94, 70, 0.15);
   border-radius: 50px;
   transition: border-color var(--transition), background-color var(--transition);
