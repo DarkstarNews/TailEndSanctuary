@@ -398,3 +398,57 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
     width: 100%; /* Le bouton s'adapte à toute la largeur du téléphone */
   }
 }
+
+/* ============================================================
+   Aug 2 round:
+   Bank info layout
+   ============================================================ */
+
+.reduced-top-padding {
+	padding: 10px;
+}
+
+.centered-half-block {
+  width: 100%;
+  max-width: 540px; 
+  margin: 0 auto;  /* centers the block horizontally */
+  text-align: justify;
+  padding: 40px 0px 40px 0px;
+
+}
+
+.eyebrow-page-title {
+  font-size: 1.0rem !important;
+  text-align: center;
+  margin-bottom:20px !important;
+}
+
+
+.bank-info-box {
+  max-width: 480px; 
+  margin: 0 auto;  /* centers the block horizontally */
+  background-color: var(--white);
+  border-radius: 12px;
+  border-color: var(--cream-dark);
+  border: 2px solid;
+  padding: 10px 15px 0px 15px;
+}
+
+.bank-info-table {
+  width: 100%;
+  table-layout: fixed; /* Force le respect des pourcentages */
+  border-collapse: collapse;
+  font-family: sans-serif;
+}
+
+.bank-info-table th:nth-child(1) {
+    width: 30%;
+}
+
+.bank-info-table th:nth-child(2) {
+    width: 70%;
+}
+
+.bank-info-table tbody td:first-child {
+    font-style: italic;
+  }
