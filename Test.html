@@ -9,8 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="redesign.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 </head>
 <body>
 
@@ -35,110 +33,52 @@
   <main>
 
   <!-- HERO -->
-  <section class="hero-ed">
-    <div class="hero-grid container">
-<!--      <div class="hero-copy reveal">  -->
-      <div class="section-header reveal">
-        <div class="sec-intro">
-          <span class="eyebrow">Bank information for transfer</span>
-        </div>
-        <h4>Use the following information to issue your bank transfer. Then fill the form below to allow us to send you a tax-deductible receipt<br/><br/></h4>
-        <div class="feature-text">
-          <p>Bank Name: Bank of America<br/>
-              Account Name: Clicker Pets, Inc.<br/>
-              Account Number: 488124646632<br/>
-              Routing number: 111000025 domestic ACH (electr.) transfer<br/>
-              Routing number: 026009593 int'l/domestic wire transfer<br/>
-              Swift/BIC code: BOFAUS3N (international wire transfers)
+  <section class="hero-ed reduced-top-padding">
+    <div class="centered-half-block reveal">
+        <span class="eyebrow eyebrow-page-title">Bank information for transfer</span>
+        <h3>Use the following information to issue your bank transfer. Then fill the form below to allow us to send you a tax-deductible receipt<br/><br/></h3>
+        <div class="feature-text bank-info-box">
+          <p>
+	        <table class="bank-info-table">
+		      <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+		      <tr>
+			    <td>Bank Name:</td>
+			    <td>Bank of America</td>
+			  </tr>
+		      <tr>
+			    <td>Account Name:</td>
+			    <td>Clicker Pets, Inc.</td>
+			  </tr>
+		      <tr>
+			    <td>Account Number:</td>
+			    <td>488124646632</td>
+			  </tr>
+		      <tr>
+			    <td>Routing number:</td>
+			    <td>111000025 domestic ACH (electr.) transfer</td>
+			  </tr>
+		      <tr>
+			    <td>Routing number:</td>
+			    <td>026009593 int'l/domestic wire transfer</td>
+			  </tr>
+		      <tr>
+			    <td>Swift/BIC code:</td>
+			    <td>BOFAUS3N (international wire transfers)</td>
+			  </tr>
+		      </tbody>
+	        </table>
           </p>
         </div>  
       </div>
     </div>
   </section>
     
-  <!-- USER INFO ENTRY FORM -->
-  <section class="section section-cream-dark" id="ways">
-    <div class="container">
-      <div class="sec-intro">
-        <span class="eyebrow">Let us know about you</span>
-      </div>
-
-      <!-- FORM instruction with a clean, single-column phone layout -->
-      <form class="custom-form custom-form--inverted reveal" action="https://formspree.io/f/mjgndnlw" method="POST">
-        <div class="form-header">
-          <h2>Bank Transfer Notification</h2>
-          <p>Please complete the following form once you have submitted your bank transfer. This information enables us to acknowledge your donation and send you a tax-deductible receipt.</p>
-        </div>
-
-        <div class="form-stack">
-          
-          <!-- Formspree hidden info -->
-             <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
-             <input type="hidden" name="_subject" value="Bank Transfer Info — Tail End Sanctuary">
-          
-          <!-- Full Name -->
-          <div class="form-group">
-            <label for="form-name">Full Name</label>
-            <input type="text" id="form-name" name="fullname" placeholder="E.g., Maria Sanchez" required>
-          </div>
-
-          <!-- Email Address -->
-          <div class="form-group">
-            <label for="form-email">Email Address</label>
-            <input type="email" id="form-email" name="email" placeholder="E.g., maria@example.com" required>
-          </div>
-
-          <!-- Donation Amount -->
-          <div class="form-group">
-            <label for="form-amount">Donation Amount (USD)</label>
-            <div class="input-prefix-wrapper">
-              <span class="input-prefix">$</span>
-              <input type="number" id="form-amount" name="amount" min="1" step="any" placeholder="0.00" required>
-            </div>
-          </div>
-
-          <!-- Mailing Address -->
-          <div class="form-group">
-            <label for="form-address">Mailing Address</label>
-            <textarea id="form-address" name="address" rows="3" placeholder="Street, Apt/Suite, City, State, ZIP/Postal Code, Country" required></textarea>
-          </div>
-
-          <!-- Intended Date of Transfer -->
-          <div class="form-group">
-            <label for="form-date">Intended Date of Transfer</label>
-            <input type="date" id="form-date" name="transfer_date" required>
-          </div>
-
-          <!-- Type of Transfer -->
-          <div class="form-group">
-            <label>Type of Transfer</label>
-            <div class="radio-group">
-              <label class="radio-label">
-                <input type="radio" name="transfer_type" value="electronic" checked>
-                <span class="radio-custom"></span>
-                Electronic Transfer
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="transfer_type" value="wire">
-                <span class="radio-custom"></span>
-                Wire Transfer
-              </label>
-            </div>
-          </div>
-        </div>
-
-      <!-- Zone d'affichage des messages de statut -->
-      <div id="form-status" class="form-status" style="display: none; margin-top: 20px; padding: 10px; border-radius: 4px; font-weight: bold; text-align: center;"></div>
-
-        <!-- Submit Action -->
-        <div class="form-actions">
-        <button type="submit" class="btn btn-primary">Submit Transfer Details</button>
-        </div>
-      </form>      
-      </div>
-    </div>
-  </section>
-
   <!-- CLOSING CTA -->
   <section class="banner banner-sage">
     <div class="container">
@@ -196,55 +136,6 @@
       }, {threshold:0.12});
       els.forEach(function(e){ io.observe(e); });
     })();
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.querySelector('.custom-form.custom-form--inverted');
-      const statusMessage = document.getElementById('form-status');
-
-      if (form && statusMessage) {
-        form.addEventListener('submit', async (event) => {
-          event.preventDefault(); // Empêche la redirection
-        
-          // Réinitialisation de la zone de message à chaque tentative
-          statusMessage.style.display = 'none';
-          statusMessage.textContent = '';
-          statusMessage.style.backgroundColor = '';
-          statusMessage.style.color = '';
-
-          const formData = new FormData(form);
-
-          try {
-            const response = await fetch(form.action, {
-              method: form.method,
-              body: formData,
-              headers: {
-                'Accept': 'application/json'
-              }
-            });
-
-            if (response.ok) {
-              // Configuration du message de succès
-              statusMessage.textContent = "Thank you. Your message was successfully sent";
-              statusMessage.style.backgroundColor = "#e6f4ea"; // Fond vert clair
-              statusMessage.style.color = "#137333";           // Texte vert foncé
-              statusMessage.style.display = "block";
-            
-              form.reset(); // Vide le formulaire
-            } else {
-              throw new Error('Formspree error');
-            }
-          } catch (error) {
-            // Configuration du message d'erreur
-            statusMessage.textContent = "Something went wrong. Please email info@tailendsanctuary.org.";
-            statusMessage.style.backgroundColor = "#fce8e6"; // Fond rouge clair
-            statusMessage.style.color = "#c5221f";           // Texte rouge foncé
-            statusMessage.style.display = "block";
-          }
-        });
-      }
-    });
   </script>
 
 
