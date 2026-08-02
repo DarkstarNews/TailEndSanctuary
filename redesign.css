@@ -451,4 +451,35 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
 
 .bank-info-table tbody td:first-child {
     font-style: italic;
-  }
+}
+
+/* --- STYLES POUR SMARTPHONES (Écrans < 600px) --- */
+@media screen and (max-width: 600px) {
+    /* Cache l'en-tête du tableau qui devient inutile */
+  .bank-info-table thead {
+    display: none;
+}
+
+/* Force le tableau et ses lignes à se comporter comme des blocs empilés */
+.bank-info-table, 
+.bank-info-table tbody, 
+.bank-info-table tr, 
+.bank-info-table td {
+  display: block;
+  width: 100% !important; /* Force la largeur complète */
+  box-sizing: border-box;
+}
+
+/* Crée un espace visuel entre chaque groupe (chaque ligne d'origine) */
+.bank-info-table tr {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* Ajuste les cellules individuelles */
+.bank-info-table td {
+  border: none; /* Supprime les bordures internes superflues */
+  padding: 8px 12px;
+}
