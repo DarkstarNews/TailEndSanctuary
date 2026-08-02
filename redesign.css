@@ -423,7 +423,6 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   margin-bottom:20px !important;
 }
 
-
 .bank-info-box {
   max-width: 480px; 
   margin: 0 auto;  /* centers the block horizontally */
@@ -431,7 +430,7 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   border-radius: 12px;
   border-color: var(--cream-dark) !important;
   border: 2px solid;
-  padding: 10px 15px 0px 15px;
+  padding: 0px 15px 0px 15px;
 }
 
 .bank-info-table {
