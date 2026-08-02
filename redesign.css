@@ -429,7 +429,7 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   margin: 0 auto;  /* centers the block horizontally */
   background-color: var(--white);
   border-radius: 12px;
-  border-color: var(--cream-dark);
+  border-color: var(--terracota);
   border: 2px solid;
   padding: 10px 15px 0px 15px;
 }
