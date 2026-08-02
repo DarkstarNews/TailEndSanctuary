@@ -483,12 +483,3 @@ h2{ font-weight:500; letter-spacing:-0.005em; }
   padding: 8px 12px;
 }
 
-/* ------------------------- */
-/* Closing CTA directives    */
-/* ------------------------- */
-
-.closing-cta-img {
-	color: var(--white);
-	display: block;
-	margin: 0 auto;
-}
