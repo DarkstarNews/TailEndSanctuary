@@ -1235,7 +1235,8 @@ textarea:focus-visible {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.6rem;
   color: var(--sage-dark);
-  margin: 2px 0 8px;
+/*  margin: 2px 0 8px; */
+  margin: 0px 0px 0px 0px;
   font-weight: 600;
 }
 
@@ -1249,9 +1250,11 @@ textarea:focus-visible {
 
 .method-card .method-detail {
   font-family: 'Inter', sans-serif;
-  font-size: 0.92rem;
+/*  font-size: 0.92rem; */
+  font-size: 0.7rem;
+  line-height: 1.0;
   color: var(--text-light);
-  margin-top: 2px;
+/*  margin-top: 2px; */
 }
 
 .method-card dl {
