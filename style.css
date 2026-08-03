@@ -1302,6 +1302,10 @@ textarea:focus-visible {
   margin-top: auto;
 }
 
+.method-card .btn-top-align {
+  margin-top: 0px;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 968px) {
   .story-block,
