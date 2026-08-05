@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Help give senior stray dogs the comfort and dignity they deserve — donate, give monthly, spread the word, or stay in touch with Tail End Sanctuary.">
+  <title>Contact Us — Tail End Sanctuary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="redesign.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo-full.png" alt="" class="nav-logo-img">
+        <span class="nav-logo-text">Tail End Sanctuary</span>
+      </a>
+      <button class="nav-toggle" onclick="var l=document.querySelector('.nav-links');l.classList.toggle('open');this.setAttribute('aria-expanded',l.classList.contains('open'))" aria-expanded="false" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="dogs.html">Meet the Dogs</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact-us.html" class="active">Contact Us</a></li>
+       <li><a href="donate.html" class="btn btn-donate">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- HERO -->
+  <section class="hero-ed">
+    <div class="hero-grid container">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">At Tail End Sanctuary</span>
+        <h1>we would love to hear from you!</h1>
+      </div>
+      <div class="hero-plate-wrap reveal">
+        <figure class="bare-figure" style="max-width:560px;">
+          <img class="bare-media" src="images/senta.jpg" width="1600" height="1146" alt="Senta, a senior dog at Tail End Sanctuary">
+          <figcaption class="media-name">Senta</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- USER INFO ENTRY FORM -->
+  <section class="section section-cream-dark" id="ways">
+    <div class="container">
+      <div class="sec-intro">
+        <span class="eyebrow">What's on your mind</span>
+      </div>
+
+      <!-- FORM instruction with a clean, single-column phone layout -->
+      <form class="custom-form custom-form--inverted reveal" action="https://formspree.io/f/xljrrevb" method="POST">
+        <div class="form-header">
+          <h2>Contact Form</h2>
+          <p>Should you have a question about Tail End Sanctuary, would like to support our mission or learn more about our dogs,  please reach out.</p>
+        </div>
+
+        <div class="form-stack">
+          
+          <!-- Formspree hidden info -->
+             <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+             <input type="hidden" name="_subject" value="Contact Form — Tail End Sanctuary">
+          
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="form-name">Full Name</label>
+            <input type="text" id="form-name" name="fullname" placeholder="E.g., Maria Sanchez" required>
+          </div>
+
+          <!-- Email Address -->
+          <div class="form-group">
+            <label for="form-email">Email Address</label>
+            <input type="email" id="form-email" name="email" placeholder="E.g., maria@example.com" required>
+          </div>
+
+          <!-- City, State, Country -->
+          <div class="form-group">
+            <label for="form-email">City, State, Country</label>
+            <input type="text" id="form-citystatecountry" name="citystatecountry" placeholder="E.g., Miami, FL, USA">
+          </div> 
+
+          <!-- Message -->
+          <div class="form-group">
+            <label for="form-address">Message</label>
+            <textarea id="form-address" name="message" rows="3" placeholder="Let us know what's on your mind"></textarea>
+          </div>
+          
+          <!-- Type of Transfer -->
+          <div class="form-group">
+            <div class="checkbox-group">
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <label for="newsletter">I would like to subscribe to your mailing list</label>
+            </div>
+          </div>
+        </div>
+
+      <!-- Zone d'affichage des messages de statut -->
+      <div id="form-status" class="form-status" style="display: none; margin-top: 20px; padding: 10px; border-radius: 4px; font-weight: bold; text-align: center;"></div>
+
+        <!-- Submit Action -->
+        <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Submit Message</button>
+        </div>
+      </form>      
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="banner banner-sage">
+    <div class="container">
+      <h2>Thank you for reaching out</h2>
+      <p>We are grateful for everyone around the world who cares about the well being of senior stray dogs here in Mexico.  Connecting with others and sharing their stories and our work is an important part of our mission.</p>
+      <p>Thank you for your inquiry, your interest, and your support.</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <img src="images/logo-full.png" alt="Tail End Sanctuary">
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="dogs.html">Meet the Dogs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tail End Sanctuary. All rights reserved. • Registered Nonprofit</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        els.forEach(function(e){ e.classList.add('in'); }); return;
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, {threshold:0.12});
+      els.forEach(function(e){ io.observe(e); });
+    })();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('.custom-form.custom-form--inverted');
+      const statusMessage = document.getElementById('form-status');
+
+      if (form && statusMessage) {
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault(); // Empêche la redirection
+        
+          // Réinitialisation de la zone de message à chaque tentative
+          statusMessage.style.display = 'none';
+          statusMessage.textContent = '';
+          statusMessage.style.backgroundColor = '';
+          statusMessage.style.color = '';
+
+          const formData = new FormData(form);
+
+          try {
+            const response = await fetch(form.action, {
+              method: form.method,
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+
+            if (response.ok) {
+              // Configuration du message de succès
+              statusMessage.textContent = "Thank you. Your message was successfully sent";
+              statusMessage.style.backgroundColor = "#e6f4ea"; // Fond vert clair
+              statusMessage.style.color = "#137333";           // Texte vert foncé
+              statusMessage.style.display = "block";
+            
+              form.reset(); // Vide le formulaire
+            } else {
+              throw new Error('Formspree error');
+            }
+          } catch (error) {
+            // Configuration du message d'erreur
+            statusMessage.textContent = "Something went wrong. Please email info@tailendsanctuary.org.";
+            statusMessage.style.backgroundColor = "#fce8e6"; // Fond rouge clair
+            statusMessage.style.color = "#c5221f";           // Texte rouge foncé
+            statusMessage.style.display = "block";
+          }
+        });
+      }
+    });
+  </script>
+
+
+</body>
+</html>
