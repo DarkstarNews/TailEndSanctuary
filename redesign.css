@@ -480,6 +480,16 @@ input[type="checkbox"]:checked::before {
   clear: both;
 }
 
+/* Target screens that are 600px wide or smaller (smartphones) */
+@media screen and (max-width: 600px) {
+  .right-image-box {
+    float: none;        /* Stop floating to the right on mobile */
+    width: 80%;         /* Make the image box scale to the phone screen */
+    max-width: 250px;   /* Set a maximum cap so it does not get too huge */
+    margin: 0 auto 15px auto; /* Centers the image block horizontally on the phone */
+  }
+}
+
 /* ============================================================
    Aug 2 round:
    Thank-you page Closing CTA layout
