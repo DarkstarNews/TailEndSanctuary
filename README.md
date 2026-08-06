@@ -8,4 +8,4 @@ A plain static website (hand-written HTML + CSS, no build step). Hosted free on 
 
 📘 **New here? Start with [DEVELOPER-GUIDE.md](DEVELOPER-GUIDE.md)** — hosting, DNS, how to publish changes, how to swap photos and text, and how to take over ownership.
 
-*every tail deserves a happy ending*
+*every tail deserves a happy ending*.  
