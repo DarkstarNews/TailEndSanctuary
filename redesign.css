@@ -449,6 +449,36 @@ input[type="checkbox"]:checked::before {
   }
 }
 
+/* ======================================= */
+/* Directives for About Us picture in text */
+/* ======================================= */
+
+.right-image-box {
+  float: right;
+  margin-left: 20px;    /* Space between the text and the image box */
+  margin-bottom: 15px;  /* Space below the image box for wrapping text */
+  width: 200px;         /* Match the width of your image */
+  text-align: center;   /* Centers the title text under the photo */
+}
+
+.right-image-box img {
+  width: 100%;          /* Ensures the image fills the 200px box width */
+  height: auto;
+}
+
+.image-title {
+  margin-top: 5px;      /* Space between the bottom of the photo and the title */
+  font-family:'Cormorant Garamond',serif; font-style:italic;
+  font-size:1rem; color:var(--text-light); text-align:center;
+
+}
+
+/* Clearfix to prevent layout breaking on container edges */
+.wrap-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /* ============================================================
    Aug 2 round:
